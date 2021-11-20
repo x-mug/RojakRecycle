@@ -29,13 +29,11 @@ public class FrgRecyclables extends Fragment {
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
 
         list = new ArrayList<>();
-        for(int i = 0; i < RecyclableThingsData.rMaterialsName.length; i++)
-        {
+        for (int i = 0; i < RecyclableThingsData.rMaterialsName.length; i++) {
             list.add(new RecyclableThings(RecyclableThingsData.rMaterialsName[i]));
         }
 
         recyclablesAdapter = new RecyclablesAdapter(getActivity(), list);
-
         recyclerView.setAdapter(recyclablesAdapter);
 
         return v;
