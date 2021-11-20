@@ -2,6 +2,7 @@ package com.example.rojakrecycle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 public class Testing extends AppCompatActivity
@@ -12,5 +13,7 @@ public class Testing extends AppCompatActivity
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_testing);
+        Intent intent = new Intent(Testing.this, LearnActivity.class);
+        startActivity(intent);
     }
 }
