@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LearnActivity">
+    tools:context=".LearnActivity"
+    android:background="@color/ghostwhite">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -21,7 +22,9 @@
             app:tabInlineLabel="true"
             app:tabMode="fixed"
             app:tabSelectedTextColor="@color/white"
-            app:tabTextColor="@color/black">
+            app:tabTextColor="@color/black"
+            android:layout_marginTop="15dp"
+            >
 
             <com.google.android.material.tabs.TabItem
                 android:id="@+id/tabRecyclable"
@@ -35,7 +38,10 @@
                 android:id="@+id/tabUnrecyclable"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="UNRECYCLABLES" />
+                android:text="UNRECYCLABLES"
+                android:elevation="5dp"
+                android:outlineAmbientShadowColor="@color/black"
+                />
         </com.google.android.material.tabs.TabLayout>
 
         <androidx.viewpager2.widget.ViewPager2
