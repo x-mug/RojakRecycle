@@ -26,6 +26,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.rojakrecycle.R;
+import com.example.rojakrecycle.Testing;
 import com.example.rojakrecycle.databinding.ActivityLoginBinding;
 import com.firebase.ui.auth.AuthUI;
 import com.firebase.ui.auth.FirebaseAuthUIActivityResultContract;
@@ -56,24 +57,32 @@ public class LoginActivity extends AppCompatActivity {
 
         // Choose authentication providers
         List<AuthUI.IdpConfig> providers = Arrays.asList(
-                new AuthUI.IdpConfig.EmailBuilder().build());
+                new AuthUI.IdpConfig.EmailBuilder().build(),
+                new AuthUI.IdpConfig.GoogleBuilder().build(),
+                new AuthUI.IdpConfig.TwitterBuilder().build());
 
-        binding = ActivityLoginBinding.inflate(getLayoutInflater());
-        setContentView(binding.getRoot());
+        Intent signInIntent = AuthUI.getInstance()
+                .createSignInIntentBuilder()
+                .setAvailableProviders(providers)
+                .build();
+        signInLauncher.launch(signInIntent);
 
-        final Button loginButton = binding.EMAIL;
-
-        loginButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Create and launch sign-in intent
-                Intent signInIntent = AuthUI.getInstance()
-                        .createSignInIntentBuilder()
-                        .setAvailableProviders(providers)
-                        .build();
-                signInLauncher.launch(signInIntent);
-            }
-        });
+//        binding = ActivityLoginBinding.inflate(getLayoutInflater());
+//        setContentView(binding.getRoot());
+//
+//        final Button loginButton = binding.EMAIL;
+//
+//        loginButton.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                // Create and launch sign-in intent
+//                Intent signInIntent = AuthUI.getInstance()
+//                        .createSignInIntentBuilder()
+//                        .setAvailableProviders(providers)
+//                        .build();
+//                signInLauncher.launch(signInIntent);
+//            }
+//        });
     }
 
     private void onSignInResult(FirebaseAuthUIAuthenticationResult result) {
@@ -84,6 +93,8 @@ public class LoginActivity extends AppCompatActivity {
             String welcome = getString(R.string.welcome) + user.getDisplayName();
             Toast.makeText(getApplicationContext(), welcome, Toast.LENGTH_LONG).show();
             // ...
+            Intent intent = new Intent(this, Testing.class);
+            startActivity(intent);
         } else {
             // Sign in failed. If response is null the user canceled the
             // sign-in flow using the back button. Otherwise check
@@ -91,6 +102,17 @@ public class LoginActivity extends AppCompatActivity {
             // ...
             String errorString = "Ops, something goes wrong.";
             Toast.makeText(getApplicationContext(), errorString, Toast.LENGTH_SHORT).show();
+            // Choose authentication providers
+            List<AuthUI.IdpConfig> providers = Arrays.asList(
+                    new AuthUI.IdpConfig.EmailBuilder().build(),
+                    new AuthUI.IdpConfig.GoogleBuilder().build(),
+                    new AuthUI.IdpConfig.TwitterBuilder().build());
+
+            Intent signInIntent = AuthUI.getInstance()
+                    .createSignInIntentBuilder()
+                    .setAvailableProviders(providers)
+                    .build();
+            signInLauncher.launch(signInIntent);
         }
     }
 }
