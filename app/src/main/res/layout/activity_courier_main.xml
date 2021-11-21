@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Courier_MainActivity">
+    <View
+        android:id="@+id/rectangle_1"
+        android:layout_width="413dp"
+        android:layout_height="217dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="35dp"
+        android:background="@drawable/purplerec"
+        app:layout_constraintBottom_toTopOf="@+id/cv_pc1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <View
+        android:id="@+id/vector_arrow"
+        android:layout_width="14dp"
+        android:layout_height="25dp"
+
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="37dp"
+        android:layout_marginEnd="323dp"
+        android:layout_marginBottom="578dp"
+        android:background="@drawable/leftarrow"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="305dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="85dp"
+        android:layout_marginEnd="29dp"
+        android:layout_marginBottom="535dp"
+        android:fontFamily="@font/roboto_medium"
+        android:text="Available Rojak couriers near"
+        android:textAlignment="center"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_title2"
+        android:layout_width="305dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="78dp"
+        android:layout_marginTop="110dp"
+        android:layout_marginEnd="103dp"
+        android:layout_marginBottom="504dp"
+        android:fontFamily="@font/roboto_medium"
+        android:text="Sunsuria Park"
+        android:textAlignment="center"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/downArrow"
+        android:layout_width="16dp"
+        android:layout_height="7dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="250dp"
+        android:layout_marginTop="130dp"
+        android:layout_marginEnd="93dp"
+        android:layout_marginBottom="515dp"
+        android:background="@drawable/arrowicon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.559" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_pc1"
+        android:layout_width="342dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="206dp"
+        android:layout_marginEnd="9dp"
+        android:layout_marginBottom="354dp"
+        app:cardCornerRadius="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:id="@+id/media1"
+            android:layout_width="85dp"
+            android:layout_height="80dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="260dp"
+            android:background="@drawable/ahmad" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="240dp"
+            android:layout_height="48dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp">
+
+            <Button
+                android:id="@+id/btn_monogram1"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/monogram_roundbg"
+                android:text="A"
+                tools:ignore="TouchTargetSizeCheck" />
+
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="184dp"
+                android:layout_height="24dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="56dp"
+                android:gravity="top"
+                android:lineSpacingExtra="5sp"
+                android:text="Ahmad Suffandi"
+                android:translationY="-2.62sp" />
+
+            <TextView
+                android:id="@+id/subhead1"
+                android:layout_width="184dp"
+                android:layout_height="20dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="56dp"
+                android:layout_marginTop="28dp"
+                android:gravity="top"
+                android:lineSpacingExtra="4sp"
+                android:text="Available for below 5kg"
+                android:translationY="-1.8sp" />
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_pc2"
+        android:layout_width="342dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="298dp"
+        android:layout_marginEnd="9dp"
+        android:layout_marginBottom="262dp"
+        app:cardCornerRadius="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:id="@+id/media2"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="260dp"
+            android:background="@drawable/wk" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="240dp"
+            android:layout_height="48dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp">
+
+            <Button
+                android:id="@+id/btn_monogram2"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/monogram_roundbg"
+                android:text="C"
+                tools:ignore="TouchTargetSizeCheck" />
+
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="184dp"
+                android:layout_height="24dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="56dp"
+                android:gravity="top"
+                android:lineSpacingExtra="5sp"
+                android:text="Chan Weng Keat"
+                android:translationY="-2.62sp" />
+
+            <TextView
+                android:id="@+id/subhead2"
+                android:layout_width="184dp"
+                android:layout_height="20dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="56dp"
+                android:layout_marginTop="28dp"
+                android:gravity="top"
+                android:lineSpacingExtra="4sp"
+                android:text="Available for below 10kg"
+                android:translationY="-1.8sp" />
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_pc3"
+        android:layout_width="342dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="390dp"
+        android:layout_marginEnd="9dp"
+        android:layout_marginBottom="170dp"
+        app:cardCornerRadius="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:id="@+id/media3"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="260dp"
+            android:background="@drawable/ismail" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="240dp"
+            android:layout_height="48dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp">
+
+            <Button
+                android:id="@+id/btn_monogram3"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/monogram_roundbg"
+                android:text="I"
+                tools:ignore="TouchTargetSizeCheck" />
+
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="184dp"
+                android:layout_height="24dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="56dp"
+                android:gravity="top"
+                android:lineSpacingExtra="5sp"
+                android:text="Ismail Kandar"
+                android:translationY="-2.62sp" />
+
+            <TextView
+                android:id="@+id/subhead3"
+                android:layout_width="184dp"
+                android:layout_height="20dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="56dp"
+                android:layout_marginTop="28dp"
+                android:gravity="top"
+                android:lineSpacingExtra="4sp"
+                android:text="Not available for now"
+                android:translationY="-1.8sp" />
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/tv_Back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="43dp"
+        android:layout_marginEnd="151dp"
+        android:layout_marginBottom="584dp"
+        android:fontFamily="@font/roboto_medium"
+        android:text="Back"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.087"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.512" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

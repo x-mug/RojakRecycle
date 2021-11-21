@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1F6750A4"
+    tools:context=".RecyclePage_MainActivity">
+
+    <TextView
+        android:id="@+id/tv_Recycle"
+        android:layout_width="303dp"
+        android:layout_height="77dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="53dp"
+        android:layout_marginEnd="29dp"
+        android:layout_marginBottom="510dp"
+        android:fontFamily="@font/poppins_bold"
+        android:text="Recycle."
+        android:textSize="64sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.509"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.329" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_CardView1"
+        android:layout_width="303dp"
+        android:layout_height="180dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="153dp"
+        android:layout_marginEnd="29dp"
+        android:layout_marginBottom="307dp"
+        app:cardBackgroundColor="#336750A4"
+        app:cardCornerRadius="22dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tv_DropOff"
+            android:layout_width="186dp"
+            android:layout_height="85dp"
+            android:layout_marginStart="29dp"
+            android:layout_marginTop="23dp"
+            android:layout_marginEnd="88dp"
+            android:layout_marginBottom="72dp"
+            android:fontFamily="@font/poppins_bold"
+            android:gravity="center_vertical"
+            android:lineSpacingExtra="0dp"
+            android:text="Drop-off at a store"
+            android:textSize="32dp" />
+
+        <TextView
+            android:id="@+id/tv_Info1"
+            android:layout_width="261dp"
+            android:layout_height="42dp"
+            android:layout_marginStart="29dp"
+            android:layout_marginTop="113dp"
+            android:layout_marginEnd="25dp"
+            android:layout_marginBottom="13dp"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="center_vertical"
+            android:lineSpacingExtra="2sp"
+            android:text="See list of partner stores near you to drop off your recyclables." />
+
+
+        <View
+            android:id="@+id/vector_1"
+            android:layout_width="25dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="240dp"
+            android:layout_marginTop="42dp"
+            android:layout_marginEnd="92dp"
+            android:layout_marginBottom="29dp"
+            android:background="@drawable/arrow" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_CardView2"
+        android:layout_width="303dp"
+        android:layout_height="180dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="356dp"
+        android:layout_marginEnd="29dp"
+        android:layout_marginBottom="104dp"
+        app:cardBackgroundColor="#336750A4"
+        app:cardCornerRadius="22dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tv_CallOff"
+            android:layout_width="186dp"
+            android:layout_height="85dp"
+            android:layout_marginStart="29dp"
+            android:layout_marginTop="23dp"
+            android:layout_marginEnd="88dp"
+            android:layout_marginBottom="72dp"
+            android:fontFamily="@font/poppins_bold"
+            android:gravity="center_vertical"
+            android:lineSpacingExtra="0dp"
+            android:text="Call for pick-up"
+            android:textSize="32dp" />
+
+        <TextView
+            android:id="@+id/tv_Info2"
+            android:layout_width="261dp"
+            android:layout_height="42dp"
+            android:layout_marginStart="29dp"
+            android:layout_marginTop="113dp"
+            android:layout_marginEnd="25dp"
+            android:layout_marginBottom="13dp"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="center_vertical"
+            android:lineSpacingExtra="2sp"
+            android:text="See list of available couriers to pick up your recyclables right from your house." />
+
+
+        <View
+            android:id="@+id/vector_2"
+            android:layout_width="25dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="240dp"
+            android:layout_marginTop="42dp"
+            android:layout_marginEnd="92dp"
+            android:layout_marginBottom="29dp"
+            android:background="@drawable/arrow" />
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

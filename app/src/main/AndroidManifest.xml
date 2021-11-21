@@ -28,6 +28,69 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".RedeemTNGVoucher_MainActivity"
+            android:exported="true" />
+        <activity
+            android:name=".RedeemHM_MainActivity"
+            android:exported="true" />
+        <activity
+            android:name=".RedeemLotus_MainActivity"
+            android:exported="true" />
+        <activity
+            android:name=".RedeemJayaGrocer_MainActivity"
+            android:exported="true" />
+        <activity
+            android:name=".RedeemTouchNGo_MainActivity"
+            android:exported="true" />
+        <activity
+            android:name=".RedeemDonate_MainActivity"
+            android:exported="true" />
+        <activity
+            android:name=".RedeemVoucher_MainActivity"
+            android:exported="true" />
+        <activity
+            android:name=".Partner4_MainActivity"
+            android:exported="true" />
+        <activity
+            android:name=".Partner3_MainActivity"
+            android:exported="true" />
+        <activity
+            android:name=".Partner2_MainActivity"
+            android:exported="true" />
+        <activity
+            android:name=".Partner1_MainActivity"
+            android:exported="true" />
+        <activity
+            android:name=".Courier3_MainActivity"
+            android:exported="true" />
+        <activity
+            android:name=".Courier2_MainActivity"
+            android:exported="true" />
+        <activity
+            android:name=".Courier1_MainActivity"
+            android:exported="true" />
+        <activity
+            android:name=".Courier_MainActivity"
+            android:exported="true" />
+        <activity
+            android:name=".PartnerStore_MainActivity"
+            android:exported="true" />
+        <activity
+            android:name=".RecycleStore_MainActivity"
+            android:exported="true" />
+        <activity
+            android:name=".RecyclePage_MainActivity"
+            android:exported="true" />
+        <activity
+            android:name=".RedeemPage_MainActivity"
+            android:exported="true" />
+
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+>>>>>>> Stashed changes
     </application>
 
 </manifest>

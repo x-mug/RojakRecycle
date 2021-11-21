@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1F6750A4"
+    tools:context=".RedeemHM_MainActivity">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_pc3"
+        android:layout_width="342dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="34dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="34dp"
+        app:cardCornerRadius="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cv_pc1"
+        app:layout_constraintVertical_bias="0.0">
+
+        <View
+            android:layout_width="46dp"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="18dp"
+            android:background="@drawable/exchange"
+            android:text="A"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="280dp"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="56dp"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="top"
+            android:lineSpacingExtra="5sp"
+            android:text="Below 5 kg:"
+            android:textSize="20dp"
+            android:translationY="-2.62sp" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="280dp"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="56dp"
+            android:layout_marginTop="38dp"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="top"
+            android:lineSpacingExtra="5sp"
+            android:text="50 points per kg"
+            android:textSize="20dp"
+            android:translationY="-2.62sp" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_pc4"
+        android:layout_width="342dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="34dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="35dp"
+        app:cardCornerRadius="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cv_pc3"
+        app:layout_constraintVertical_bias="0.0">
+
+        <View
+            android:layout_width="46dp"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="18dp"
+            android:background="@drawable/exchange"
+            android:text="A"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="280dp"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="56dp"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="top"
+            android:lineSpacingExtra="5sp"
+            android:text="Above 5 kg:"
+            android:textSize="20dp"
+            android:translationY="-2.62sp" />
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="280dp"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="56dp"
+            android:layout_marginTop="38dp"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="top"
+            android:lineSpacingExtra="5sp"
+            android:text="60 points per kg"
+            android:textSize="20dp"
+            android:translationY="-2.62sp" />
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/roboto_medium"
+        android:text="Donate clothes here"
+        android:textSize="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/tv_Back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="38dp"
+        android:layout_marginEnd="151dp"
+        android:layout_marginBottom="584dp"
+        android:fontFamily="@font/roboto_medium"
+        android:text="Back"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.087"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.137" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="312dp"
+        android:layout_height="363dp"
+        android:layout_marginStart="46dp"
+        android:layout_marginEnd="46dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.163"
+        app:srcCompat="@drawable/handm" />
+
+    <TextView
+        android:id="@+id/tv_title3"
+        android:layout_width="305dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="17dp"
+        android:background="@drawable/btn_storenamebg"
+        android:fontFamily="@font/roboto_medium"
+        android:text="H &amp; M"
+        android:textAlignment="center"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.439"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.574" />
+
+    <View
+        android:id="@+id/vector_arrow"
+        android:layout_width="14dp"
+        android:layout_height="25dp"
+
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="37dp"
+        android:layout_marginEnd="323dp"
+        android:layout_marginBottom="578dp"
+        android:background="@drawable/leftarrow"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.509"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.186" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="305dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="29dp"
+        android:layout_marginBottom="584dp"
+        android:fontFamily="@font/roboto_medium"
+        android:text="Partner Store"
+        android:textAlignment="center"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.51"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.229" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_pc1"
+        android:layout_width="342dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="34dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="35dp"
+        app:cardCornerRadius="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title3">
+
+        <View
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/location"
+            android:text="A"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="250dp"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="56dp"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="top"
+            android:lineSpacingExtra="5sp"
+            android:text="789, Jalan Sunsuria"
+            android:textSize="20dp"
+            android:translationY="-2.62sp" />
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
