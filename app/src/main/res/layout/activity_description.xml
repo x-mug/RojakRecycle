@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ghostwhite"
+    tools:context=".DescriptionActivity">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/poppinsbold"
+        android:text="Title"
+        android:textColor="@color/black"
+        android:textSize="30dp"
+        android:layout_marginVertical="40dp"
+        />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvImg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="50dp"
+        android:layout_below="@+id/tvTitle"
+        android:layout_centerInParent="true"
+        >
+
+        <ImageView
+            android:id="@+id/ivImage"
+            android:layout_width="850px"
+            android:layout_height="450px"
+            android:src="@drawable/ic_launcher_background"
+            android:scaleType="centerCrop"
+
+            />
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cvImg"
+        app:cardCornerRadius="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginHorizontal="20dp"
+        >
+    <TextView
+        android:id="@+id/tvDesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="30dp"
+        android:text="text text text text text text text text text text text text text text text "
+        android:textSize="16dp"
+        android:lineSpacingMultiplier="1.5"
+
+        />
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>
+</androidx.core.widget.NestedScrollView>

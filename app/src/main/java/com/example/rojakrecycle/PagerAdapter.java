@@ -25,6 +25,11 @@ public class PagerAdapter extends FragmentStateAdapter {
                 fragment = new FrgRecyclables();
                 break;
             }
+            case 1:
+            {
+                fragment = new FrgUnrecyclables();
+                break;
+            }
         }
         return fragment;
     }

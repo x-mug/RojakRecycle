@@ -35,7 +35,7 @@ public class LearnActivity extends AppCompatActivity {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
                 viewPager.setCurrentItem(tab.getPosition());
-                if (tab.getPosition() == 0){
+                if (tab.getPosition() == 0 || tab.getPosition() == 1){
                     pagerAdapter.notifyDataSetChanged();
                 }
             }

@@ -13,28 +13,27 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-public class FrgRecyclables extends Fragment {
-
+public class FrgUnrecyclables extends Fragment {
     RecyclerView recyclerView;
-    ArrayList<RecyclableThings> list;
-    RecyclablesAdapter recyclablesAdapter;
+    ArrayList<UnrecyclableThings> list;
+    UnrecyclablesAdapter unrecyclablesAdapter;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View v = inflater.inflate(R.layout.fragment_recyclables, container, false);
+        View v = inflater.inflate(R.layout.fragment_unrecyclables, container, false);
 
-        recyclerView = v.findViewById(R.id.recyclablesList);
+        recyclerView = v.findViewById(R.id.unrecyclablesList);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
 
         list = new ArrayList<>();
-        for (int i = 0; i < RecyclableThingsData.rMaterialsName.length; i++) {
-            list.add(new RecyclableThings(RecyclableThingsData.rMaterialsName[i], RecyclableThingsData.rMaterialsDesc[i], RecyclableThingsData.rMaterialsImg[i]));
+        for (int i = 0; i < UnrecyclableThingsData.rMaterialsName.length; i++) {
+            list.add(new UnrecyclableThings(UnrecyclableThingsData.rMaterialsName[i], UnrecyclableThingsData.rMaterialsDesc[i], UnrecyclableThingsData.rMaterialsImg[i]));
         }
 
-        recyclablesAdapter = new RecyclablesAdapter(getActivity(), list);
-        recyclerView.setAdapter(recyclablesAdapter);
+        unrecyclablesAdapter = new UnrecyclablesAdapter(getActivity(), list);
+        recyclerView.setAdapter(unrecyclablesAdapter);
 
         return v;
     }

@@ -1,13 +1,10 @@
 package com.example.rojakrecycle;
 
-import android.content.Intent;
-
-public class RecyclableThings {
+public class UnrecyclableThings {
     String rMaterial, rMaterialDesc;
     Integer rMaterialImg;
 
-
-    public RecyclableThings(String rMaterial, String rMaterialDesc, Integer rMaterialImg) {
+    public UnrecyclableThings(String rMaterial, String rMaterialDesc, Integer rMaterialImg) {
         this.rMaterial = rMaterial;
         this.rMaterialDesc = rMaterialDesc;
         this.rMaterialImg = rMaterialImg;
