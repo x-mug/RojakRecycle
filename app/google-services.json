@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "918670838159",
+    "firebase_url": "https://rojekrecycle-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "rojekrecycle",
+    "storage_bucket": "rojekrecycle.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:918670838159:android:791fd5ee4f23f0121623fa",
+        "android_client_info": {
+          "package_name": "com.example.rojakrecycle"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "918670838159-5l0cpabjnehi65bg2is7c4j32ifg91ob.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDwBX6_JBCaBmDyzHhvoH8KuevIagQ8JwA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "918670838159-5l0cpabjnehi65bg2is7c4j32ifg91ob.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

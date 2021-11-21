@@ -13,6 +13,12 @@
             android:name=".LearnActivity"
             android:exported="true" />
         <activity android:name=".Testing">
+
+        </activity>
+
+        <activity android:name=".login.LoginActivity"
+            android:exported="true"
+            android:label="RojakRecycle Login">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
