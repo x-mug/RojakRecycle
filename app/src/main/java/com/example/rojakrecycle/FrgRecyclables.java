@@ -30,7 +30,7 @@ public class FrgRecyclables extends Fragment {
 
         list = new ArrayList<>();
         for (int i = 0; i < RecyclableThingsData.rMaterialsName.length; i++) {
-            list.add(new RecyclableThings(RecyclableThingsData.rMaterialsName[i]));
+            list.add(new RecyclableThings(RecyclableThingsData.rMaterialsName[i], RecyclableThingsData.rMaterialsDesc[i], RecyclableThingsData.rMaterialsImg[i]));
         }
 
         recyclablesAdapter = new RecyclablesAdapter(getActivity(), list);

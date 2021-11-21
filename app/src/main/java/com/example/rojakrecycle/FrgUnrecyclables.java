@@ -29,7 +29,7 @@ public class FrgUnrecyclables extends Fragment {
 
         list = new ArrayList<>();
         for (int i = 0; i < UnrecyclableThingsData.rMaterialsName.length; i++) {
-            list.add(new UnrecyclableThings(UnrecyclableThingsData.rMaterialsName[i]));
+            list.add(new UnrecyclableThings(UnrecyclableThingsData.rMaterialsName[i], UnrecyclableThingsData.rMaterialsDesc[i], UnrecyclableThingsData.rMaterialsImg[i]));
         }
 
         unrecyclablesAdapter = new UnrecyclablesAdapter(getActivity(), list);

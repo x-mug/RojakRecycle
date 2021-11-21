@@ -10,11 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.RojakRecycle">
         <activity
+            android:name=".DescriptionActivity"
+            android:exported="true" />
+        <activity
             android:name=".LearnActivity"
             android:exported="true" />
         <activity android:name=".Testing">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
