@@ -10,16 +10,20 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.RojakRecycle">
         <activity
+            android:name=".RedeemDescriptionActivity"
+            android:exported="true" />
+        <activity
+            android:name=".RedeemActivity"
+            android:exported="true" />
+        <activity
             android:name=".DescriptionActivity"
             android:exported="true" />
         <activity
             android:name=".LearnActivity"
             android:exported="true" />
-        <activity android:name=".Testing">
-
-        </activity>
-
-        <activity android:name=".login.LoginActivity"
+        <activity android:name=".Testing" />
+        <activity
+            android:name=".login.LoginActivity"
             android:exported="true"
             android:label="RojakRecycle Login">
             <intent-filter>
@@ -86,11 +90,9 @@
             android:name=".RedeemPage_MainActivity"
             android:exported="true" />
 
-
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
->>>>>>> Stashed changes
     </application>
 
 </manifest>
