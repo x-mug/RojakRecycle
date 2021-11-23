@@ -1,17 +1,18 @@
 package com.example.rojakrecycle.home;
 
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
 
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-
 
 import com.example.rojakrecycle.R;
 import com.github.mikephil.charting.animation.Easing;
@@ -24,12 +25,9 @@ import com.github.mikephil.charting.utils.ColorTemplate;
 
 import java.util.ArrayList;
 
-public class HomePage extends Fragment {
+public class NoQuizActivity extends Fragment {
 
-
-
-    public CardView Card1;
-
+    public CardView Card4;
     private PieChart pieChart;
 
     @Override
@@ -38,18 +36,19 @@ public class HomePage extends Fragment {
 
 
 
-        Card1 = (CardView) v.findViewById(R.id.card1);
-        pieChart = v.findViewById(R.id.activity_main_piechart);
+        Card4 = (CardView) v.findViewById(R.id.card4);
+        pieChart = v.findViewById(R.id.activity_main_piechart2);
         setupPieChart();
         loadPieChartData();
 
 
         Log.w("HomePage", String.valueOf(R.id.nav_host_fragment_activity_bottom_navigation));
 
-        Card1.setOnClickListener(new View.OnClickListener() {
+        Card4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.nav_host_fragment_activity_bottom_navigation, new QuizActivity()).commit();
+                CannotAcess();
+                //getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.nav_host_fragment_activity_bottom_navigation, new QuizActivity()).commit();
 
             }
         });
@@ -106,5 +105,23 @@ public class HomePage extends Fragment {
 
         pieChart.animateY(1400, Easing.EaseInOutQuad);
     }
+
+    private void CannotAcess(){
+        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(getActivity());
+        alertDialogBuilder
+                .setMessage("Daily Quiz is complete" +
+                        "\nCome back tomorrow to get 5 points!")
+                .setCancelable(false)
+                .setPositiveButton("Back to Homepage", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        //getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.nav_host_fragment_activity_bottom_navigation, new NoQuizActivity()).commit();
+                        //startActivity(new Intent(getApplicationContext(), NoQuizActivity.class));
+
+                    }
+                });
+        alertDialogBuilder.show();
+    }
+
 
 }

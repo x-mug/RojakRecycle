@@ -38,7 +38,6 @@ public class ResultActivity extends AppCompatDialogFragment {
         View view = inflater.inflate(R.layout.activity_result, null);
 
         tv_outOf = view.findViewById(R.id.tv_outOf);
-        tv_ques = view.findViewById(R.id.tv_ques);
 
 
         if(getArguments() != null){

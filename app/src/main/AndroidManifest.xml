@@ -19,8 +19,9 @@
         <activity
             android:name=".Redeem.TOOLS.RedeemActivity"
             android:exported="true" />
-        <activity android:name=".Redeem.TOOLS.RedeemDescriptionActivity"
-            android:exported="true"/>
+        <activity
+            android:name=".Redeem.TOOLS.RedeemDescriptionActivity"
+            android:exported="true" />
         <activity
             android:name=".login.LoginActivity"
             android:label="RojakRecycle Login"
@@ -35,7 +36,6 @@
             android:name=".login.RegisterActivity"
             android:exported="true"
             android:theme="@style/Theme.Design.NoActionBar" />
-
         <activity
             android:name=".Partner4_MainActivity"
             android:exported="true" />
