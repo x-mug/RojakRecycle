@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/homePage">
+    <fragment
+        android:id="@+id/homePage"
+        android:name="com.example.rojakrecycle.home.HomePage"
+        android:label="activity_home_page"
+        tools:layout="@layout/activity_home_page" />
+    <fragment
+        android:id="@+id/learnActivity"
+        android:name="com.example.rojakrecycle.Learn.LearnActivity"
+        android:label="activity_learn"
+        tools:layout="@layout/activity_learn" />
+</navigation>
