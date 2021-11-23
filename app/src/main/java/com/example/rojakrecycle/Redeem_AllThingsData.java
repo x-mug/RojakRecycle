@@ -24,4 +24,5 @@ public class Redeem_AllThingsData {
     static String[] RPoints = {
             "RM 20 off at Jaya Grocer with 130 points", "RM 30 off at Lotus Mall with 150 points", "Old clothes require at H & M with 50 points per kg", "Rojak Point to Touch 'N Go"
     };
+
 }

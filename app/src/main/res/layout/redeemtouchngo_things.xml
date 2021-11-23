@@ -9,7 +9,7 @@
     app:cardCornerRadius="5dp">
 
     <RelativeLayout
-        android:id="@+id/Redeem_pic"
+        android:id="@+id/Redeem_layout"
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:layout_alignParentTop="true"
@@ -18,6 +18,15 @@
         android:layout_marginLeft="260dp"
         android:background="@drawable/jayagrocer" />
 
+    <ImageView
+        android:id="@+id/Redeem_pic"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="260dp"
+        android:background="@drawable/jayagrocer"/>
 
     <TextView
         android:id="@+id/textView1"

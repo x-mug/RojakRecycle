@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -36,6 +37,7 @@ public class RedeemVouchersAdapter extends RecyclerView.Adapter <RedeemVouchersA
         Redeem_VouchersThings redeem_vouchersThings = list.get(position);
         holder.name.setText(redeem_vouchersThings.getRName());
         holder.subhead.setText(redeem_vouchersThings.getRPoints());
+        holder.Album.setImageResource(redeem_vouchersThings.getRImage());
         holder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -60,6 +62,7 @@ public class RedeemVouchersAdapter extends RecyclerView.Adapter <RedeemVouchersA
         CardView cardView;
         TextView name;
         TextView subhead;
+        ImageView Album;
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -67,6 +70,7 @@ public class RedeemVouchersAdapter extends RecyclerView.Adapter <RedeemVouchersA
             cardView = itemView.findViewById(R.id.cv_rdAll);
             name = itemView.findViewById(R.id.textView1);
             subhead = itemView.findViewById(R.id.subhead1);
+            Album = itemView.findViewById(R.id.Redeem_pic);
         }
 
     }

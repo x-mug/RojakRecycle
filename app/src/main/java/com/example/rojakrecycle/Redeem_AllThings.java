@@ -1,7 +1,7 @@
 package com.example.rojakrecycle;
 
 public class Redeem_AllThings {
-    Integer RImage;
+    Integer RImage, RImage2;
     String RName, RLocation, RExchange, RPoints;
 
     public Redeem_AllThings (String RName, String RLocation,String RExchange, Integer RImage, String RPoints){

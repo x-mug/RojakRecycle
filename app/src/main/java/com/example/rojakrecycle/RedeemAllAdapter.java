@@ -38,7 +38,7 @@ public class RedeemAllAdapter extends RecyclerView.Adapter <RedeemAllAdapter.MyV
         Redeem_AllThings redeem_allThings = list.get(position);
         holder.name.setText(redeem_allThings.getRName());
         holder.subhead.setText(redeem_allThings.getRPoints());
-        //holder.Album.setImageResource(redeem_allThings.getRImage());
+        holder.Album.setImageResource(redeem_allThings.getRImage());
         holder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -62,7 +62,7 @@ public class RedeemAllAdapter extends RecyclerView.Adapter <RedeemAllAdapter.MyV
 
         CardView cardView;
         TextView name;
-        //ImageView Album;
+        ImageView Album;
         TextView subhead;
 
         public MyViewHolder(@NonNull View itemView) {
@@ -71,7 +71,7 @@ public class RedeemAllAdapter extends RecyclerView.Adapter <RedeemAllAdapter.MyV
             cardView = itemView.findViewById(R.id.cv_rdAll);
             name = itemView.findViewById(R.id.textView1);
             subhead = itemView.findViewById(R.id.subhead1);
-            //Album = itemView.findViewById(R.id.Redeem_pic);
+            Album = itemView.findViewById(R.id.Redeem_pic);
         }
 
     }
