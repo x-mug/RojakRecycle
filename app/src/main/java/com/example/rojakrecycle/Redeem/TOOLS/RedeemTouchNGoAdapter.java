@@ -1,4 +1,4 @@
-package com.example.rojakrecycle.Redeem;
+package com.example.rojakrecycle.Redeem.TOOLS;
 
 import android.content.Context;
 import android.content.Intent;
@@ -14,34 +14,32 @@ import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.rojakrecycle.R;
-import com.example.rojakrecycle.Redeem.TOOLS.Redeem_AllThings;
 
 import java.util.ArrayList;
 
-public class RedeemAllAdapter extends RecyclerView.Adapter <RedeemAllAdapter.MyViewHolder>{
+public class RedeemTouchNGoAdapter extends RecyclerView.Adapter <RedeemTouchNGoAdapter.MyViewHolder>{
 
     Context context;
-    ArrayList<Redeem_AllThings> list;
+    ArrayList<Redeem_TouchNGoThings> list;
 
-    public RedeemAllAdapter (Context context, ArrayList<Redeem_AllThings> list) {
+    public RedeemTouchNGoAdapter(Context context, ArrayList<Redeem_TouchNGoThings> list) {
         this.context = context;
         this.list = list;
     }
 
     @NonNull
     @Override
-    public RedeemAllAdapter.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View v = LayoutInflater.from(context).inflate(R.layout.redeemall_things, parent, false);
-        return new RedeemAllAdapter.MyViewHolder(v);
+    public RedeemTouchNGoAdapter.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View v = LayoutInflater.from(context).inflate(R.layout.redeemtouchngo_things, parent, false);
+        return new RedeemTouchNGoAdapter.MyViewHolder(v);
     }
 
-
     @Override
-    public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
-        Redeem_AllThings redeem_allThings = list.get(position);
-        holder.name.setText(redeem_allThings.getRName());
-        holder.subhead.setText(redeem_allThings.getRPoints());
-        holder.Album.setImageResource(redeem_allThings.getRImage());
+    public void onBindViewHolder(@NonNull RedeemTouchNGoAdapter.MyViewHolder holder, int position) {
+        Redeem_TouchNGoThings redeem_touchNGoThings = list.get(position);
+        holder.name.setText(redeem_touchNGoThings.getRName());
+        holder.subhead.setText(redeem_touchNGoThings.getRPoints());
+        holder.Album.setImageResource(redeem_touchNGoThings.getRImage());
         holder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -65,8 +63,8 @@ public class RedeemAllAdapter extends RecyclerView.Adapter <RedeemAllAdapter.MyV
 
         CardView cardView;
         TextView name;
-        ImageView Album;
         TextView subhead;
+        ImageView Album;
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);

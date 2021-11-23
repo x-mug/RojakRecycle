@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.rojakrecycle.R;
+
 public class DescriptionActivity extends AppCompatActivity {
 
     TextView tvDesc;

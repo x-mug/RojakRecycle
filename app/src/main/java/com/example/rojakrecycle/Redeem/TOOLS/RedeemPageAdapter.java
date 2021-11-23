@@ -1,16 +1,10 @@
-package com.example.rojakrecycle.Redeem;
+package com.example.rojakrecycle.Redeem.TOOLS;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.lifecycle.Lifecycle;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
-
-import com.example.rojakrecycle.FragAll;
-import com.example.rojakrecycle.FragDonate;
-import com.example.rojakrecycle.FragTouchNGo;
-import com.example.rojakrecycle.FragVouchers;
 
 public class RedeemPageAdapter extends FragmentStateAdapter {
 

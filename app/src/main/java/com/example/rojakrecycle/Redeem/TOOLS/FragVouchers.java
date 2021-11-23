@@ -1,4 +1,4 @@
-package com.example.rojakrecycle;
+package com.example.rojakrecycle.Redeem.TOOLS;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -11,7 +11,8 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.rojakrecycle.Redeem.RedeemVouchersAdapter;
+import com.example.rojakrecycle.R;
+import com.example.rojakrecycle.Redeem.TOOLS.RedeemVouchersAdapter;
 import com.example.rojakrecycle.Redeem.TOOLS.Redeem_VouchersThings;
 import com.example.rojakrecycle.Redeem.TOOLS.Redeem_VouchersThingsData;
 
@@ -21,7 +22,7 @@ public class FragVouchers extends Fragment {
 
     RecyclerView recyclerView;
     ArrayList<Redeem_VouchersThings> list;
-    com.example.rojakrecycle.Redeem.RedeemVouchersAdapter RedeemVouchersAdapter;
+    com.example.rojakrecycle.Redeem.TOOLS.RedeemVouchersAdapter RedeemVouchersAdapter;
 
     @Nullable
     @Override

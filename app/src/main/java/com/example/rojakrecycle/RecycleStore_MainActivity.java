@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
+import com.example.rojakrecycle.R;
+
 public class RecycleStore_MainActivity extends AppCompatActivity {
 
     @Override

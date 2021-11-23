@@ -17,6 +17,11 @@
             android:name=".DescriptionActivity"
             android:exported="true" />
         <activity
+            android:name=".Redeem.TOOLS.RedeemActivity"
+            android:exported="true" />
+        <activity android:name=".Redeem.TOOLS.RedeemDescriptionActivity"
+            android:exported="true"/>
+        <activity
             android:name=".login.LoginActivity"
             android:label="RojakRecycle Login"
             android:theme="@style/Theme.Design.NoActionBar">
@@ -30,27 +35,7 @@
             android:name=".login.RegisterActivity"
             android:exported="true"
             android:theme="@style/Theme.Design.NoActionBar" />
-        <activity
-            android:name=".RedeemTNGVoucher_MainActivity"
-            android:exported="true" />
-        <activity
-            android:name=".RedeemHM_MainActivity"
-            android:exported="true" />
-        <activity
-            android:name=".RedeemLotus_MainActivity"
-            android:exported="true" />
-        <activity
-            android:name=".RedeemJayaGrocer_MainActivity"
-            android:exported="true" />
-        <activity
-            android:name=".RedeemTouchNGo_MainActivity"
-            android:exported="true" />
-        <activity
-            android:name=".RedeemDonate_MainActivity"
-            android:exported="true" />
-        <activity
-            android:name=".RedeemVoucher_MainActivity"
-            android:exported="true" />
+
         <activity
             android:name=".Partner4_MainActivity"
             android:exported="true" />
