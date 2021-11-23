@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Learn.LearnActivity"
+    tools:context=".RedeemActivity"
     android:background="@color/ghostwhite">
 
     <RelativeLayout
@@ -17,7 +17,7 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:fontFamily="@font/poppinsbold"
-            android:text="Learn."
+            android:text="Redeem."
             android:textColor="@color/black"
             android:textSize="64dp">
 
@@ -40,24 +40,41 @@
             app:tabTextColor="@color/black">
 
             <com.google.android.material.tabs.TabItem
-                android:id="@+id/tabRecyclable"
+                android:id="@+id/tabAll"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:elevation="5dp"
                 android:outlineAmbientShadowColor="@color/black"
-                android:text="RECYCLABLES" />
+                android:text="ALL" />
 
             <com.google.android.material.tabs.TabItem
-                android:id="@+id/tabUnrecyclable"
+                android:id="@+id/tabVoucher"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:elevation="5dp"
                 android:outlineAmbientShadowColor="@color/black"
-                android:text="UNRECYCLABLES" />
+                android:text="Vouchers" />
+
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/tabDonate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:elevation="5dp"
+                android:outlineAmbientShadowColor="@color/black"
+                android:text="DONATE" />
+
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/tabTouchNGo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:elevation="5dp"
+                android:outlineAmbientShadowColor="@color/black"
+                android:text="Touch 'N Go" />
+
         </com.google.android.material.tabs.TabLayout>
 
         <androidx.viewpager2.widget.ViewPager2
-            android:id="@+id/fragmentcontainer"
+            android:id="@+id/Redeemfragmentcontainer"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_below="@+id/include"

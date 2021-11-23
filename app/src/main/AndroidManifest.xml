@@ -84,9 +84,6 @@
         <activity
             android:name=".RecyclePage_MainActivity"
             android:exported="true" />
-        <activity
-            android:name=".RedeemPage_MainActivity"
-            android:exported="true" />
 
         <meta-data
             android:name="preloaded_fonts"
