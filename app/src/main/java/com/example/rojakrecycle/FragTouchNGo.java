@@ -11,13 +11,17 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.rojakrecycle.Redeem.RedeemTouchNGoAdapter;
+import com.example.rojakrecycle.Redeem.TOOLS.Redeem_TouchNGoThings;
+import com.example.rojakrecycle.Redeem.TOOLS.Redeem_TouchNGoThingsData;
+
 import java.util.ArrayList;
 
 public class FragTouchNGo extends Fragment {
 
     RecyclerView recyclerView;
     ArrayList<Redeem_TouchNGoThings> list;
-    RedeemTouchNGoAdapter RedeemTouchNGoAdapter;
+    com.example.rojakrecycle.Redeem.RedeemTouchNGoAdapter RedeemTouchNGoAdapter;
 
     @Nullable
     @Override

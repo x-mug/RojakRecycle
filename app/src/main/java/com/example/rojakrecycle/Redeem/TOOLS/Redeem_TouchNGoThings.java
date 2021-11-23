@@ -1,10 +1,10 @@
-package com.example.rojakrecycle;
+package com.example.rojakrecycle.Redeem.TOOLS;
 
-public class Redeem_VouchersThings {
+public class Redeem_TouchNGoThings {
     Integer RImage;
     String RName, RLocation, RExchange, RPoints;
 
-    public Redeem_VouchersThings(String RName, String RLocation, String RExchange, Integer RImage, String RPoints){
+    public Redeem_TouchNGoThings(String RName, String RLocation, String RExchange, Integer RImage,String RPoints){
         this.RName = RName;
         this.RLocation = RLocation;
         this.RExchange = RExchange;

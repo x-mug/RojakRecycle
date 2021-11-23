@@ -1,4 +1,4 @@
-package com.example.rojakrecycle;
+package com.example.rojakrecycle.Redeem;
 
 import android.content.Context;
 import android.content.Intent;
@@ -13,7 +13,8 @@ import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
-import org.w3c.dom.Text;
+import com.example.rojakrecycle.R;
+import com.example.rojakrecycle.Redeem.TOOLS.Redeem_DonateThings;
 
 import java.util.ArrayList;
 

@@ -11,13 +11,17 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.rojakrecycle.Redeem.RedeemDonateAdapter;
+import com.example.rojakrecycle.Redeem.TOOLS.Redeem_DonateThings;
+import com.example.rojakrecycle.Redeem.TOOLS.Redeem_DonateThingsData;
+
 import java.util.ArrayList;
 
 public class FragDonate extends Fragment {
 
     RecyclerView recyclerView;
     ArrayList<Redeem_DonateThings> list;
-    RedeemDonateAdapter RedeemDonateAdapter;
+    com.example.rojakrecycle.Redeem.RedeemDonateAdapter RedeemDonateAdapter;
 
     @Nullable
     @Override

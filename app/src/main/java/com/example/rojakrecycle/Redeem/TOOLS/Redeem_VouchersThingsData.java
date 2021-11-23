@@ -1,4 +1,6 @@
-package com.example.rojakrecycle;
+package com.example.rojakrecycle.Redeem.TOOLS;
+
+import com.example.rojakrecycle.R;
 
 public class Redeem_VouchersThingsData {
 

@@ -11,13 +11,17 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.rojakrecycle.Redeem.RedeemAllAdapter;
+import com.example.rojakrecycle.Redeem.TOOLS.Redeem_AllThings;
+import com.example.rojakrecycle.Redeem.TOOLS.Redeem_AllThingsData;
+
 import java.util.ArrayList;
 
 public class FragAll extends Fragment {
 
     RecyclerView recyclerView;
     ArrayList<Redeem_AllThings> list;
-    RedeemAllAdapter RedeemAllAdapter;
+    com.example.rojakrecycle.Redeem.RedeemAllAdapter RedeemAllAdapter;
 
     @Nullable
     @Override

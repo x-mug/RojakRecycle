@@ -1,13 +1,12 @@
-package com.example.rojakrecycle;
+package com.example.rojakrecycle.Redeem;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.viewpager2.widget.ViewPager2;
 
 import android.os.Bundle;
-import android.widget.Toolbar;
 
+import com.example.rojakrecycle.R;
 import com.google.android.material.tabs.TabItem;
 import com.google.android.material.tabs.TabLayout;
 

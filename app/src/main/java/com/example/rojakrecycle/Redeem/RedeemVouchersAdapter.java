@@ -1,4 +1,4 @@
-package com.example.rojakrecycle;
+package com.example.rojakrecycle.Redeem;
 
 import android.content.Context;
 import android.content.Intent;
@@ -13,32 +13,34 @@ import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.rojakrecycle.R;
+import com.example.rojakrecycle.Redeem.TOOLS.Redeem_VouchersThings;
+
 import java.util.ArrayList;
 
-public class RedeemAllAdapter extends RecyclerView.Adapter <RedeemAllAdapter.MyViewHolder>{
+public class RedeemVouchersAdapter extends RecyclerView.Adapter <RedeemVouchersAdapter.MyViewHolder>{
 
     Context context;
-    ArrayList<Redeem_AllThings> list;
+    ArrayList<Redeem_VouchersThings> list;
 
-    public RedeemAllAdapter (Context context, ArrayList<Redeem_AllThings> list) {
+    public RedeemVouchersAdapter(Context context, ArrayList<Redeem_VouchersThings> list) {
         this.context = context;
         this.list = list;
     }
 
     @NonNull
     @Override
-    public RedeemAllAdapter.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View v = LayoutInflater.from(context).inflate(R.layout.redeemall_things, parent, false);
-        return new RedeemAllAdapter.MyViewHolder(v);
+    public RedeemVouchersAdapter.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View v = LayoutInflater.from(context).inflate(R.layout.redeemvouchers_things, parent, false);
+        return new RedeemVouchersAdapter.MyViewHolder(v);
     }
 
-
     @Override
-    public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
-        Redeem_AllThings redeem_allThings = list.get(position);
-        holder.name.setText(redeem_allThings.getRName());
-        holder.subhead.setText(redeem_allThings.getRPoints());
-        holder.Album.setImageResource(redeem_allThings.getRImage());
+    public void onBindViewHolder(@NonNull RedeemVouchersAdapter.MyViewHolder holder, int position) {
+        Redeem_VouchersThings redeem_vouchersThings = list.get(position);
+        holder.name.setText(redeem_vouchersThings.getRName());
+        holder.subhead.setText(redeem_vouchersThings.getRPoints());
+        holder.Album.setImageResource(redeem_vouchersThings.getRImage());
         holder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -62,8 +64,8 @@ public class RedeemAllAdapter extends RecyclerView.Adapter <RedeemAllAdapter.MyV
 
         CardView cardView;
         TextView name;
-        ImageView Album;
         TextView subhead;
+        ImageView Album;
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
