@@ -21,8 +21,14 @@ import com.example.rojakrecycle.navBar.BottomNavigationActivity;
 import com.firebase.ui.auth.AuthUI;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
+import java.util.concurrent.Executor;
 
 public class Profile_Activity extends Fragment {
     @Override
@@ -32,13 +38,33 @@ public class Profile_Activity extends Fragment {
 
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
 
-        TextView userName = (TextView)v.findViewById(R.id.userName);
-        TextView name = (TextView)v.findViewById(R.id.name);
-        TextView phoneNumber = (TextView)v.findViewById(R.id.phone_number);
-        TextView email = (TextView)v.findViewById(R.id.email);
+        TextView userName = (TextView) v.findViewById(R.id.userName);
+        TextView name = (TextView) v.findViewById(R.id.name);
+        TextView rojakPoint = (TextView) v.findViewById(R.id.rojakpoint);
+        TextView phoneNumber = (TextView) v.findViewById(R.id.phone_number);
+        TextView email = (TextView) v.findViewById(R.id.email);
 
 
         userName.setText(user.getDisplayName());
+        FirebaseDatabase
+                .getInstance()
+                .getReference()
+                .child("users")
+                .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
+                .child("RojakPoint")
+                .get()
+                .addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
+                    @Override
+                    public void onComplete(@NonNull Task<DataSnapshot> task) {
+                        if (!task.isSuccessful()) {
+                            Log.e("firebase", "Error getting data", task.getException());
+                        }
+                        else {
+                            Log.d("firebase", String.valueOf(task.getResult().getValue()));
+                            rojakPoint.setText(task.getResult().getValue().toString());
+                        }
+                    }
+                });
         name.setText(user.getDisplayName());
         phoneNumber.setText(user.getPhoneNumber());
         email.setText(user.getEmail());
@@ -59,6 +85,7 @@ public class Profile_Activity extends Fragment {
                 Log.w("123", "LogOUT");
             }
         });
+
         return v;
     }
 }

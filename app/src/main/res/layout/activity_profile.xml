@@ -108,6 +108,7 @@
             <TextView
                 style="@style/headerText"
                 android:text="Account Info"
+                android:textColor="@color/black"
                 android:layout_marginBottom="20dp"/>
 
             <RelativeLayout style="@style/profileDetailsLayout">
@@ -126,6 +127,26 @@
                     android:id="@+id/name"
                     style="@style/profileDetailsMiniText"
                     android:layout_toRightOf="@id/nameImageView"
+                    android:text="developer" />
+
+            </RelativeLayout>
+
+            <RelativeLayout style="@style/profileDetailsLayout">
+                <ImageView
+                    android:id="@+id/pointImageView"
+                    android:src="@drawable/monogram_roundbg"
+                    style="@style/profileDetailsImage" />
+
+                <TextView
+                    android:id="@+id/pointTextView"
+                    style="@style/profileDetailsTextMain"
+                    android:layout_toRightOf="@id/pointImageView"
+                    android:text="RojakPoint" />
+
+                <TextView
+                    android:id="@+id/rojakpoint"
+                    style="@style/profileDetailsMiniText"
+                    android:layout_toRightOf="@id/pointImageView"
                     android:text="developer" />
 
             </RelativeLayout>
