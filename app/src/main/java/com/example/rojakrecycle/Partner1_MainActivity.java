@@ -1,37 +1,38 @@
 package com.example.rojakrecycle;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.TextView;
 
-public class Partner1_MainActivity extends AppCompatActivity {
+public class Partner1_MainActivity extends Fragment {
     View backArrow;
     TextView backText;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_partner1_main);
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        View v = View.inflate(getActivity(), R.layout.activity_partner1_main, null);
 
-        backArrow = findViewById(R.id.vector_arrow);
+        backArrow = v.findViewById(R.id.vector_arrow);
         backArrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent_one = new Intent(Partner1_MainActivity.this, PartnerStore_MainActivity.class);
-                startActivity(intent_one);
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.nav_host_fragment_activity_bottom_navigation, new PartnerStore_MainActivity()).commit();
             }
         });
 
-        backText = findViewById(R.id.tv_Back);
+        backText = v.findViewById(R.id.tv_Back);
         backText.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent_one = new Intent(Partner1_MainActivity.this, PartnerStore_MainActivity.class);
-                startActivity(intent_one);
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.nav_host_fragment_activity_bottom_navigation, new PartnerStore_MainActivity()).commit();
             }
         });
+        return v;
     }
 }

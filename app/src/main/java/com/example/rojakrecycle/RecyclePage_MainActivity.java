@@ -2,36 +2,39 @@ package com.example.rojakrecycle;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
+import androidx.fragment.app.Fragment;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 
-public class RecyclePage_MainActivity extends AppCompatActivity {
+import com.example.rojakrecycle.home.QuizActivity;
+
+public class RecyclePage_MainActivity extends Fragment {
     CardView firstCard;
     CardView secondCard;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_recycle_page_main);
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        View v = View.inflate(getActivity(), R.layout.activity_recycle_page_main, null);
 
-        firstCard = findViewById(R.id.cv_CardView1);
+        firstCard = v.findViewById(R.id.cv_CardView1);
         firstCard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent_one = new Intent(RecyclePage_MainActivity.this, PartnerStore_MainActivity.class);
-                startActivity(intent_one);
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.nav_host_fragment_activity_bottom_navigation, new PartnerStore_MainActivity()).commit();
             }
         });
 
-        secondCard = findViewById(R.id.cv_CardView2);
+        secondCard = v.findViewById(R.id.cv_CardView2);
         secondCard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent_two = new Intent(RecyclePage_MainActivity.this, Courier_MainActivity.class);
-                startActivity(intent_two);
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.nav_host_fragment_activity_bottom_navigation, new Courier_MainActivity()).commit();
             }
         });
+        return v;
     }
 }

@@ -2,42 +2,42 @@ package com.example.rojakrecycle;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
+import androidx.fragment.app.Fragment;
 
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.TextView;
 
-public class Courier1_MainActivity extends AppCompatActivity {
+public class Courier1_MainActivity extends Fragment {
     View backArrow;
     TextView backText;
     CardView PhoneCall;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_courier1_main);
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        View v = View.inflate(getActivity(), R.layout.activity_courier1_main, null);
 
-        backArrow = findViewById(R.id.vector_arrow);
+        backArrow = v.findViewById(R.id.vector_arrow);
         backArrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent_one = new Intent(Courier1_MainActivity.this, Courier_MainActivity.class);
-                startActivity(intent_one);
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.nav_host_fragment_activity_bottom_navigation, new Courier_MainActivity()).commit();
             }
         });
 
-        backText = findViewById(R.id.tv_Back);
+        backText = v.findViewById(R.id.tv_Back);
         backText.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent_one = new Intent(Courier1_MainActivity.this, Courier_MainActivity.class);
-                startActivity(intent_one);
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.nav_host_fragment_activity_bottom_navigation, new Courier_MainActivity()).commit();
             }
         });
 
-        PhoneCall = findViewById(R.id.cv_Phone1);
+        PhoneCall = v.findViewById(R.id.cv_Phone1);
         PhoneCall.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -46,5 +46,6 @@ public class Courier1_MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        return v;
     }
 }
