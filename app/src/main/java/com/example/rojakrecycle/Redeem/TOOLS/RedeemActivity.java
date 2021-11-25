@@ -1,16 +1,20 @@
 package com.example.rojakrecycle.Redeem.TOOLS;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.viewpager2.widget.ViewPager2;
 
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 
 import com.example.rojakrecycle.R;
 import com.google.android.material.tabs.TabItem;
 import com.google.android.material.tabs.TabLayout;
 
-public class RedeemActivity extends AppCompatActivity {
+public class RedeemActivity extends Fragment {
 
     TabLayout tabLayout;
     TabItem AllTab, VouchersTab, DonateTab, TouchNGoTab;
@@ -18,17 +22,16 @@ public class RedeemActivity extends AppCompatActivity {
     ViewPager2 viewPager;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_redeem);
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        View v = View.inflate(getActivity(), R.layout.activity_home_page, null);
 
-        AllTab = findViewById(R.id.tabAll);
-        VouchersTab = findViewById(R.id.tabVoucher);
-        DonateTab = findViewById(R.id.tabDonate);
-        TouchNGoTab = findViewById(R.id.tabTouchNGo);
-        viewPager = findViewById(R.id.Redeemfragmentcontainer);
-        tabLayout = findViewById(R.id.include);
-        FragmentManager fragmentManager = getSupportFragmentManager();
+        AllTab = v.findViewById(R.id.tabAll);
+        VouchersTab = v.findViewById(R.id.tabVoucher);
+        DonateTab = v.findViewById(R.id.tabDonate);
+        TouchNGoTab = v.findViewById(R.id.tabTouchNGo);
+        viewPager = v.findViewById(R.id.Redeemfragmentcontainer);
+        tabLayout = v.findViewById(R.id.include);
+        FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
         RedeemPageAdapter = new RedeemPageAdapter(fragmentManager, getLifecycle());
         viewPager.setAdapter(RedeemPageAdapter);
 
@@ -60,5 +63,6 @@ public class RedeemActivity extends AppCompatActivity {
             }
         });
 
+        return v;
     }
 }

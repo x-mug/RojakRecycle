@@ -15,6 +15,7 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
 import com.example.rojakrecycle.R;
+import com.example.rojakrecycle.UserData.UserData;
 import com.example.rojakrecycle.home.QuizActivity;
 import com.example.rojakrecycle.login.LoginActivity;
 import com.example.rojakrecycle.navBar.BottomNavigationActivity;
@@ -46,9 +47,8 @@ public class Profile_Activity extends Fragment {
 
 
         userName.setText(user.getDisplayName());
-        FirebaseDatabase
-                .getInstance()
-                .getReference()
+
+        UserData.GetInstance().databaseRef
                 .child("users")
                 .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
                 .child("RojakPoint")

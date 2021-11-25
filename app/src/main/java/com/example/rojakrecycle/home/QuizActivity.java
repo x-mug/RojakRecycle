@@ -14,6 +14,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.rojakrecycle.R;
+import com.example.rojakrecycle.UserData.UserData;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -44,26 +45,6 @@ public class QuizActivity extends Fragment {
         falseBtn = (Button) v.findViewById(R.id.btn_false);
 
         updateQuestion();
-
-        FirebaseDatabase
-                .getInstance()
-                .getReference()
-                .child("users")
-                .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
-                .child("RojakPoint")
-                .get()
-                .addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
-                    @Override
-                    public void onComplete(@NonNull Task<DataSnapshot> task) {
-                        if (!task.isSuccessful()) {
-                            Log.e("firebase", "Error getting data", task.getException());
-                        }
-                        else {
-                            Log.d("firebase", String.valueOf(task.getResult().getValue()));
-                            previousPoints = Integer.parseInt(task.getResult().getValue().toString());
-                        }
-                    }
-                });
 
         //Logic for True Button
         trueBtn.setOnClickListener(new View.OnClickListener() {
@@ -164,7 +145,7 @@ public class QuizActivity extends Fragment {
                 .child("users")
                 .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
                 .child("RojakPoint")
-                .setValue(previousPoints + points)
+                .setValue(UserData.GetInstance().curRojakPoint + points)
                 .addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override
                     public void onSuccess(Void aVoid) {

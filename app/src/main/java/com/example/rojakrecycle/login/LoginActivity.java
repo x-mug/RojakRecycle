@@ -13,17 +13,21 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
+import com.example.rojakrecycle.UserData.UserData;
 import com.example.rojakrecycle.navBar.BottomNavigationActivity;
 import com.firebase.ui.auth.AuthUI;
 import com.firebase.ui.auth.FirebaseAuthUIActivityResultContract;
 import com.firebase.ui.auth.IdpResponse;
 import com.firebase.ui.auth.data.model.FirebaseAuthUIAuthenticationResult;
+import com.firebase.ui.auth.data.model.User;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.example.rojakrecycle.databinding.ActivityLoginBinding;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.Arrays;
 import java.util.List;
@@ -76,7 +80,7 @@ public class LoginActivity extends AppCompatActivity {
                 // Choose authentication providers
                 List<AuthUI.IdpConfig> providers = Arrays.asList(
                         new AuthUI.IdpConfig.GoogleBuilder().build());
-                        //new AuthUI.IdpConfig.FacebookBuilder().build());
+                //new AuthUI.IdpConfig.FacebookBuilder().build());
 
                 // Create and launch sign-in intent
                 Intent signInIntent = AuthUI.getInstance()
@@ -124,6 +128,7 @@ public class LoginActivity extends AppCompatActivity {
             Toast.makeText(LoginActivity.this, "Welcome, " + user.getDisplayName(),
                     Toast.LENGTH_SHORT).show();
             Intent intent = new Intent(LoginActivity.this, BottomNavigationActivity.class);
+
             startActivity(intent);
         } else {
             Toast.makeText(LoginActivity.this, "Authentication failed.",
@@ -138,9 +143,11 @@ public class LoginActivity extends AppCompatActivity {
         FirebaseUser currentUser = mAuth.getCurrentUser();
         if (currentUser != null) {
             currentUser.reload();
-//            Intent intent = new Intent(LoginActivity.this, BottomNavigationActivity.class);
-//            startActivity(intent);
+
+            updateUI(currentUser);
         }
     }
+
+
 
 }
