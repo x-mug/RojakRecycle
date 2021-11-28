@@ -14,7 +14,7 @@
         <TextView
             android:id="@+id/tvLearn"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="80dp"
             android:layout_centerHorizontal="true"
             android:fontFamily="@font/poppinsbold"
             android:text="Learn."

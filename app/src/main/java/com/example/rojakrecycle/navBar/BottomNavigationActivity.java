@@ -2,11 +2,14 @@ package com.example.rojakrecycle.navBar;
 
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.TextView;
 
 import com.example.rojakrecycle.Learn.LearnActivity;
 import com.example.rojakrecycle.Profile.Profile_Activity;
 import com.example.rojakrecycle.R;
 import com.example.rojakrecycle.home.HomePage;
+import com.google.android.material.bottomnavigation.BottomNavigationMenuView;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import androidx.annotation.NonNull;
@@ -25,6 +28,7 @@ public class BottomNavigationActivity extends AppCompatActivity {
 
         //Initialize And Assign Variable
         BottomNavigationView bottomNavigationView = findViewById(R.id.nav_view);
+        bottomNavigationView.setItemIconTintList(null);
 
         //Perform ItemSelectedListener
         bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
