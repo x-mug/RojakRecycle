@@ -31,13 +31,14 @@
             android:layout_marginHorizontal="6dp"
             android:layout_marginTop="15dp"
             android:background="@color/ghostwhite"
-            app:tabIndicator="@drawable/ic_taboval"
+            app:tabIndicator="@color/purple"
             app:tabIndicatorColor="@color/purple"
             app:tabIndicatorHeight="60dp"
             app:tabInlineLabel="true"
             app:tabMode="fixed"
             app:tabSelectedTextColor="@color/white"
-            app:tabTextColor="@color/black">
+            app:tabTextColor="@color/black"
+            >
 
             <com.google.android.material.tabs.TabItem
                 android:id="@+id/tabAll"

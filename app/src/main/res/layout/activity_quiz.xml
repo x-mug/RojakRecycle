@@ -5,7 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".home.QuizActivity">
+    tools:context=".home.QuizActivity"
+    android:background="@color/ghostwhite"
+    >
 
     <RelativeLayout
         android:id="@+id/score"
@@ -19,7 +21,9 @@
             android:padding="16dp"
             android:text="Score: "
             android:textSize="20sp"
-            android:textStyle="bold"/>
+            android:textStyle="bold"
+            android:fontFamily="@font/poppinsregular"
+            />
 
         <TextView
             android:id="@+id/points"
@@ -29,7 +33,9 @@
             android:padding="16dp"
             android:text="0"
             android:textSize="20sp"
-            android:textStyle="bold"/>
+            android:textStyle="bold"
+            android:fontFamily="@font/poppinsregular"
+            />
 
     </RelativeLayout>
 
@@ -56,7 +62,12 @@
             android:text="True"
             android:layout_weight="1"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_taboval"
+            android:textColor="@color/ghostwhite"
+            android:fontFamily="@font/poppinsregular"
+
+            />
 
         <Button
             android:layout_marginLeft="40dp"
@@ -65,7 +76,12 @@
             android:text="False"
             android:layout_weight="1"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_taboval"
+            android:theme="@style/Button.Purple"
+            android:fontFamily="@font/poppinsregular"
+
+            />
 
 
     </LinearLayout>

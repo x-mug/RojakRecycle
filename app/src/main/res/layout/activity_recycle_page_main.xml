@@ -4,13 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#1F6750A4"
+    android:background="@color/ghostwhite"
     tools:context=".RecyclePage_MainActivity">
 
     <TextView
         android:id="@+id/tv_Recycle"
-        android:layout_width="303dp"
-        android:layout_height="77dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginStart="28dp"
         android:layout_marginTop="53dp"
         android:layout_marginEnd="29dp"
@@ -19,6 +19,7 @@
         android:text="Recycle."
         android:textSize="64sp"
         android:textStyle="bold"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.509"
@@ -45,27 +46,29 @@
 
         <TextView
             android:id="@+id/tv_DropOff"
-            android:layout_width="186dp"
-            android:layout_height="85dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginStart="29dp"
             android:layout_marginTop="23dp"
             android:layout_marginEnd="88dp"
             android:layout_marginBottom="72dp"
             android:fontFamily="@font/poppins_bold"
             android:gravity="center_vertical"
-            android:lineSpacingExtra="0dp"
+            android:lineHeight="30dp"
+            android:textSize="32dp"
             android:text="Drop-off at a store"
-            android:textSize="32dp" />
+            android:textColor="@color/black"
+             />
 
         <TextView
             android:id="@+id/tv_Info1"
-            android:layout_width="261dp"
+            android:layout_width="252dp"
             android:layout_height="42dp"
             android:layout_marginStart="29dp"
             android:layout_marginTop="113dp"
             android:layout_marginEnd="25dp"
             android:layout_marginBottom="13dp"
-            android:fontFamily="@font/roboto_medium"
+            android:fontFamily="@font/poppinsregular"
             android:gravity="center_vertical"
             android:lineSpacingExtra="2sp"
             android:text="See list of partner stores near you to drop off your recyclables." />
@@ -109,19 +112,21 @@
             android:layout_marginBottom="72dp"
             android:fontFamily="@font/poppins_bold"
             android:gravity="center_vertical"
-            android:lineSpacingExtra="0dp"
+            android:lineHeight="30dp"
+            android:textSize="32dp"
             android:text="Call for pick-up"
-            android:textSize="32dp" />
+            android:textColor="@color/black"
+            />
 
         <TextView
             android:id="@+id/tv_Info2"
-            android:layout_width="261dp"
+            android:layout_width="250dp"
             android:layout_height="42dp"
             android:layout_marginStart="29dp"
             android:layout_marginTop="113dp"
             android:layout_marginEnd="25dp"
             android:layout_marginBottom="13dp"
-            android:fontFamily="@font/roboto_medium"
+            android:fontFamily="@font/poppinsregular"
             android:gravity="center_vertical"
             android:lineSpacingExtra="2sp"
             android:text="See list of available couriers to pick up your recyclables right from your house." />

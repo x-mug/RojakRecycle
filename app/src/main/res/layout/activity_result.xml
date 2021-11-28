@@ -16,10 +16,12 @@
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
         android:padding="16dp"
-        android:text="Congratulation"
+        android:text="Congratulations!"
         android:textAlignment="center"
-        android:textSize="24sp"
-        android:textStyle="bold" />
+        android:textSize="30sp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/poppinsbold"
+        />
 
     <TextView
         android:id="@+id/tv_outOf"
@@ -30,9 +32,10 @@
         android:layout_marginTop="3dp"
         android:layout_marginEnd="16dp"
         android:padding="16dp"
-        android:text="You score 9 oit of 9"
+        android:text="You scored 9 oit of 9."
+        android:fontFamily="@font/poppinsregular"
         android:textAlignment="viewStart"
-        android:textSize="24sp" />
+        android:textSize="20sp" />
 
 
     <TextView
@@ -44,8 +47,11 @@
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="5dp"
         android:padding="16dp"
-        android:text="Come back tomorrow to get 5 points"
+        android:text="Come back tomorrow to get 5 points."
         android:textAlignment="viewStart"
-        android:textSize="20sp" />
+        android:fontFamily="@font/poppinsregular"
+        android:textSize="20sp"
+
+        />
 
 </RelativeLayout>

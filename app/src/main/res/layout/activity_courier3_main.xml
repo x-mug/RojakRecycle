@@ -28,7 +28,7 @@
             android:layout_alignParentTop="true"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
-            android:background="@drawable/phonr"
+            android:background="@drawable/call"
             android:text="A"
             tools:ignore="TouchTargetSizeCheck" />
 
@@ -38,21 +38,24 @@
             android:layout_height="30dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
-            android:layout_marginLeft="56dp"
+            android:layout_marginLeft="60dp"
             android:layout_marginTop="17dp"
-            android:fontFamily="@font/roboto_medium"
+            android:fontFamily="@font/poppinsbold"
             android:gravity="top"
             android:lineSpacingExtra="5sp"
-            android:text="010-9999999"
-            android:textSize="20dp"
-            android:translationY="-2.62sp" />
+            android:text="012 - 1150563"
+            android:textSize="18dp"
+            android:translationY="-2.62sp"
+
+            />
 
     </androidx.cardview.widget.CardView>
+
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView2"
         android:layout_width="342dp"
-        android:layout_height="80dp"
+        android:layout_height="60dp"
         android:layout_marginStart="34dp"
         android:layout_marginTop="9dp"
         android:layout_marginEnd="35dp"
@@ -69,8 +72,8 @@
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             android:layout_marginLeft="10dp"
-            android:layout_marginTop="20dp"
-            android:background="@drawable/clock"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/time"
             android:text="A"
             tools:ignore="TouchTargetSizeCheck" />
 
@@ -80,16 +83,32 @@
             android:layout_height="30dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
-            android:layout_marginLeft="56dp"
-            android:layout_marginTop="30dp"
-            android:fontFamily="@font/roboto_medium"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="19dp"
+            android:fontFamily="@font/poppinsregular"
             android:gravity="top"
             android:lineSpacingExtra="5sp"
-            android:text="19:00 - 20:30"
-            android:textSize="20dp"
+            android:text="15:00 - 17:00"
+            android:textSize="16dp"
             android:translationY="-2.62sp" />
-
     </androidx.cardview.widget.CardView>
+
+    <View
+        android:id="@+id/vector_arrow"
+        android:layout_width="14dp"
+        android:layout_height="25dp"
+
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="370dp"
+        android:layout_marginBottom="578dp"
+        android:background="@drawable/leftarrow"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.509"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.186" />
 
     <TextView
         android:id="@+id/tv_Back"
@@ -97,7 +116,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="48dp"
         android:layout_marginTop="38dp"
-        android:layout_marginEnd="151dp"
+        android:layout_marginEnd="270dp"
         android:layout_marginBottom="584dp"
         android:fontFamily="@font/roboto_medium"
         android:text="Back"
@@ -111,8 +130,8 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="281dp"
-        android:layout_height="304dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_marginStart="46dp"
         android:layout_marginTop="80dp"
         android:layout_marginEnd="53dp"
@@ -121,42 +140,23 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ismail" />
+        app:srcCompat="@drawable/char4"
+        />
 
     <TextView
         android:id="@+id/tv_title3"
         android:layout_width="305dp"
         android:layout_height="30dp"
         android:layout_marginStart="53dp"
-        android:layout_marginTop="10dp"
         android:layout_marginEnd="53dp"
-        android:background="@drawable/btn_namebg"
-        android:fontFamily="@font/roboto_medium"
+        android:fontFamily="@font/poppinsbold"
         android:text="Ismail Kandar"
         android:textAlignment="center"
         android:textSize="24dp"
-        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/cv_pc1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
-
-    <View
-        android:id="@+id/vector_arrow"
-        android:layout_width="14dp"
-        android:layout_height="25dp"
-
-        android:layout_marginStart="23dp"
-        android:layout_marginTop="37dp"
-        android:layout_marginEnd="323dp"
-        android:layout_marginBottom="578dp"
-        android:background="@drawable/leftarrow"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.509"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.186" />
 
     <TextView
         android:id="@+id/tv_title"
@@ -166,7 +166,8 @@
         android:layout_marginTop="30dp"
         android:layout_marginEnd="29dp"
         android:layout_marginBottom="584dp"
-        android:fontFamily="@font/roboto_medium"
+        android:fontFamily="@font/poppinsregular"
+        android:textColor="@color/black"
         android:text=" Courier delivery"
         android:textAlignment="center"
         android:textSize="24dp"
@@ -185,7 +186,7 @@
         android:layout_marginEnd="9dp"
         android:layout_marginBottom="2dp"
         android:fontFamily="@font/roboto_medium"
-        android:text="Your courier is busy"
+        android:text="Your courier is free"
         android:textSize="16dp"
         app:layout_constraintBottom_toTopOf="@+id/imageView"
         app:layout_constraintEnd_toEndOf="parent"
@@ -197,7 +198,7 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/cv_pc1"
         android:layout_width="342dp"
-        android:layout_height="80dp"
+        android:layout_height="60dp"
         android:layout_marginStart="34dp"
         android:layout_marginTop="12dp"
         android:layout_marginEnd="35dp"
@@ -213,7 +214,7 @@
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             android:layout_marginLeft="10dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
             android:background="@drawable/location"
             android:text="A"
             tools:ignore="TouchTargetSizeCheck" />
@@ -224,13 +225,13 @@
             android:layout_height="30dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
-            android:layout_marginLeft="56dp"
-            android:layout_marginTop="30dp"
-            android:fontFamily="@font/roboto_medium"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="19dp"
+            android:fontFamily="@font/poppinsregular"
             android:gravity="top"
             android:lineSpacingExtra="5sp"
-            android:text="2.8km from your location"
-            android:textSize="20dp"
+            android:text="3km from your location"
+            android:textSize="16dp"
             android:translationY="-2.62sp" />
 
     </androidx.cardview.widget.CardView>

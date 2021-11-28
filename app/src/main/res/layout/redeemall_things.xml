@@ -17,15 +17,15 @@
             android:layout_alignParentBottom="true"
             android:layout_marginLeft="260dp" />
 
-            <ImageView
-                android:id="@+id/Redeem_pic"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentBottom="true"
-                android:layout_marginLeft="260dp"
-                android:background="@drawable/jayagrocer"/>
+    <ImageView
+        android:id="@+id/Redeem_pic"
+        android:layout_width="wrap_content"
+        android:layout_height="91dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="260dp"
+        android:background="@drawable/jayagrocer" />
 
 
             <TextView
@@ -39,7 +39,9 @@
                 android:gravity="top"
                 android:lineSpacingExtra="5sp"
                 android:text="RM 20 off at Jaya Grocer"
-                android:translationY="-2.62sp" />
+                android:translationY="-2.62sp"
+                android:fontFamily="@font/poppinsbold"
+                />
 
             <TextView
                 android:id="@+id/subhead1"
@@ -52,7 +54,9 @@
                 android:gravity="top"
                 android:lineSpacingExtra="4sp"
                 android:text="130 points"
-                android:translationY="-1.8sp" />
+                android:translationY="-1.8sp"
+                android:fontFamily="@font/poppinsregular"
+                />
 
     </androidx.cardview.widget.CardView>
 
