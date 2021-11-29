@@ -14,14 +14,14 @@
         <TextView
             android:id="@+id/tvLearn"
             android:layout_width="wrap_content"
-            android:layout_height="80dp"
+            android:layout_height="95dp"
             android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
             android:fontFamily="@font/poppinsbold"
             android:text="Learn."
             android:textColor="@color/black"
-            android:textSize="64dp">
+            android:textSize="64dp" />
 
-        </TextView>
 
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/include"

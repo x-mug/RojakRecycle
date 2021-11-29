@@ -81,9 +81,11 @@
                         android:layout_alignParentTop="true"
                         />
 
-                    <TextView
+                    <Button
                         android:id="@+id/LogOutBtn"
-                        style="@style/profileStyledBackButton"
+                        style="@style/loginButton"
+                        android:layout_marginBottom="20dp"
+                        android:layout_centerHorizontal="true"
                         android:fontFamily="@font/poppinsbold"
                         android:text="Log Out" />
                 </RelativeLayout>
@@ -135,9 +137,8 @@
                     android:id="@+id/nameTextView"
                     style="@style/profileDetailsTextMain"
                     android:layout_toRightOf="@id/nameImageView"
-                    android:text="Name"
                     android:fontFamily="@font/poppinsbold"
-                    />
+                    android:text="Name" />
 
                 <TextView
                     android:id="@+id/name"

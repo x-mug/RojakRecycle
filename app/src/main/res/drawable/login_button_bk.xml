@@ -4,14 +4,18 @@
         android:radius="27dp"
         />
     <gradient
-        android:angle="45"
-        android:centerX="35%"
-        android:startColor="#FC8822"
-        android:endColor="#FFB129"
+        android:angle="90"
+        android:centerX="30%"
+        android:startColor="@color/purple"
+        android:endColor="#93b7ff"
         android:type="linear"
         />
     <size
         android:width="182dp"
         android:height="54dp"
+        />
+    <stroke
+        android:color="@color/purple"
+        android:width="1dp"
         />
 </shape>

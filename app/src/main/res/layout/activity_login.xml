@@ -4,27 +4,45 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".login.LoginActivity"
     android:background="@color/ghostwhite"
-    android:focusableInTouchMode="true">
+    android:focusableInTouchMode="true"
+    tools:context=".login.LoginActivity">
 
-    <LinearLayout android:layout_width="match_parent"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="24dp"
         android:layout_marginStart="24dp"
         android:layout_marginTop="8dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="8dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            style="@style/loginHeader"
-            android:text="Login"
-            android:layout_marginTop="@dimen/loginViewsMargin"/>
+
+<RelativeLayout
+    android:layout_width="400dp"
+    android:layout_height="wrap_content"
+    >
+
+    <ImageView
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:src="@drawable/globe"
+        android:translationX="50dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/poppinsbold"
+        android:lineHeight="80dp"
+        android:text="Login to Rojak."
+        android:textColor="@color/black"
+        android:textSize="64dp" />
+</RelativeLayout>
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/textInputEmail"
@@ -32,12 +50,13 @@
             android:layout_marginTop="@dimen/loginViewsMargin">
 
             <EditText
-                android:textColor="@color/black"
                 android:id="@+id/editTextEmail"
                 style="@style/modifiedEditText"
                 android:hint="@string/login_email_hint"
                 android:inputType="textEmailAddress"
-                android:maxLines="1" />
+                android:maxLines="1"
+                android:textSize="14dp"
+                android:textColor="@color/black" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -46,29 +65,31 @@
             android:layout_marginTop="@dimen/loginViewsMargin">
 
             <EditText
-                android:textColor="@color/black"
                 android:id="@+id/editTextPassword"
                 style="@style/modifiedEditText"
                 android:hint="@string/login_password_hint"
                 android:inputType="textPassword"
-                android:maxLines="1" />
+                android:maxLines="1"
+                android:textSize="14dp"
+                android:textColor="@color/black" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <Button
             android:id="@+id/cirLoginButton"
             style="@style/loginButton"
-            android:text="Login"
             android:layout_gravity="right"
-            android:layout_marginTop="@dimen/loginViewsMargin"/>
+            android:layout_marginTop="@dimen/loginViewsMargin"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Login" />
 
         <Button
-            style="@style/parent"
-            android:textAlignment="textEnd"
-            android:textStyle="bold"
-            android:textColor="@color/white"
             android:id="@+id/Sign_up_hypertext"
+            style="@style/parent"
+            android:layout_marginTop="@dimen/loginViewsMargin"
             android:text="@string/login_signup_hint"
-            android:layout_marginTop="@dimen/loginViewsMargin"/>
+            android:textColor="@color/white"
+            android:fontFamily="@font/poppins_bold"
+            android:textStyle="bold" />
 
         <Button
             android:id="@+id/cirSocialLogin"
@@ -77,7 +98,9 @@
             android:layout_height="wrap_content"
             android:layout_gravity="right"
             android:layout_marginTop="@dimen/loginViewsMargin"
-            android:text="Social Account Login" />
+            android:text="Social Account Login"
+            android:fontFamily="@font/poppins_bold"
+            />
 
     </LinearLayout>
 
