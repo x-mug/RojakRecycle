@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#1F6750A4"
-    tools:context=".RedeemLotus_MainActivity">
+    android:background="#1F6750A4">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cv_pc3"

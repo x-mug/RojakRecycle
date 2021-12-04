@@ -24,8 +24,7 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginLeft="260dp"
-        android:background="@drawable/jayagrocer" />
+        android:layout_marginLeft="260dp" />
 
 
             <TextView
