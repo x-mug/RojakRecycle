@@ -48,23 +48,9 @@ public class Profile_Activity extends Fragment {
 
         userName.setText(user.getDisplayName());
 
-        UserData.GetInstance().databaseRef
-                .child("users")
-                .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
-                .child("RojakPoint")
-                .get()
-                .addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
-                    @Override
-                    public void onComplete(@NonNull Task<DataSnapshot> task) {
-                        if (!task.isSuccessful()) {
-                            Log.e("firebase", "Error getting data", task.getException());
-                        }
-                        else {
-                            Log.d("firebase", String.valueOf(task.getResult().getValue()));
-                            rojakPoint.setText(task.getResult().getValue().toString());
-                        }
-                    }
-                });
+        // Set Current RojakPoint
+        rojakPoint.setText(String.valueOf(UserData.GetInstance().GetRojakPoint()));
+
         name.setText(user.getDisplayName());
         phoneNumber.setText(user.getPhoneNumber());
         email.setText(user.getEmail());

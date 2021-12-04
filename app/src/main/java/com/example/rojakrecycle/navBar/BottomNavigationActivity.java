@@ -8,6 +8,8 @@ import android.widget.TextView;
 import com.example.rojakrecycle.Learn.LearnActivity;
 import com.example.rojakrecycle.Profile.Profile_Activity;
 import com.example.rojakrecycle.R;
+import com.example.rojakrecycle.RecyclePage_MainActivity;
+import com.example.rojakrecycle.Redeem.TOOLS.RedeemActivity;
 import com.example.rojakrecycle.home.HomePage;
 import com.google.android.material.bottomnavigation.BottomNavigationMenuView;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -41,6 +43,13 @@ public class BottomNavigationActivity extends AppCompatActivity {
 
                     case R.id.navigation_learn:
                         getSupportFragmentManager().beginTransaction().replace(R.id.nav_host_fragment_activity_bottom_navigation, new LearnActivity()).commit();
+                        return true;
+
+                    case R.id.navigation_recycle:
+                        getSupportFragmentManager().beginTransaction().replace(R.id.nav_host_fragment_activity_bottom_navigation, new RecyclePage_MainActivity()).commit();
+                        return true;
+                    case R.id.navigation_redeem:
+                        getSupportFragmentManager().beginTransaction().replace(R.id.nav_host_fragment_activity_bottom_navigation, new RedeemActivity()).commit();
                         return true;
 
                     case R.id.navigation_profile:

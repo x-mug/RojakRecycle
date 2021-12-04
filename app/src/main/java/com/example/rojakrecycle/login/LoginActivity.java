@@ -9,6 +9,7 @@ import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
@@ -29,6 +30,8 @@ import com.example.rojakrecycle.databinding.ActivityLoginBinding;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.beans.PropertyChangeEvent;
+import java.beans.PropertyChangeListener;
 import java.util.Arrays;
 import java.util.List;
 
@@ -93,6 +96,10 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void LoginWithEmailAndPassword() {
+        if (!isEmail(binding.editTextEmail.getText().toString()) || binding.editTextPassword.getText().toString().isEmpty()) {
+            Toast.makeText(this, "Input Error", Toast.LENGTH_SHORT).show();
+            return;
+        }
         mAuth.signInWithEmailAndPassword(binding.editTextEmail.getText().toString(), binding.editTextPassword.getText().toString())
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
@@ -111,6 +118,15 @@ public class LoginActivity extends AppCompatActivity {
                 });
     }
 
+    public static boolean isEmail(String strEmail) {
+        String strPattern = "^[a-zA-Z0-9][\\w\\.-]*[a-zA-Z0-9]@[a-zA-Z0-9][\\w\\.-]*[a-zA-Z0-9]\\.[a-zA-Z][a-zA-Z\\.]*[a-zA-Z]$";
+        if (TextUtils.isEmpty(strPattern)) {
+            return false;
+        } else {
+            return strEmail.matches(strPattern);
+        }
+    }
+
     private void onSignInResult(FirebaseAuthUIAuthenticationResult result) {
         IdpResponse response = result.getIdpResponse();
         if (result.getResultCode() == RESULT_OK) {
@@ -127,9 +143,15 @@ public class LoginActivity extends AppCompatActivity {
         if (user != null) {
             Toast.makeText(LoginActivity.this, "Welcome, " + user.getDisplayName(),
                     Toast.LENGTH_SHORT).show();
-            Intent intent = new Intent(LoginActivity.this, BottomNavigationActivity.class);
-
-            startActivity(intent);
+            UserData.GetInstance().addPropertyChangeListener(new PropertyChangeListener() {
+                @Override
+                public void propertyChange(PropertyChangeEvent propertyChangeEvent) {
+                    Intent intent = new Intent(LoginActivity.this, BottomNavigationActivity.class);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
+                    intent.setClass(LoginActivity.this,BottomNavigationActivity.class);
+                    startActivity(intent);
+                }
+            });
         } else {
             Toast.makeText(LoginActivity.this, "Authentication failed.",
                     Toast.LENGTH_SHORT).show();
@@ -147,7 +169,6 @@ public class LoginActivity extends AppCompatActivity {
             updateUI(currentUser);
         }
     }
-
 
 
 }

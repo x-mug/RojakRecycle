@@ -23,6 +23,11 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.sql.Time;
+import java.sql.Timestamp;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 public class QuizActivity extends Fragment {
 
     private TextView tv_score;
@@ -46,35 +51,10 @@ public class QuizActivity extends Fragment {
 
         updateQuestion();
 
-        FirebaseDatabase
-                .getInstance()
-                .getReference()
-                .child("users")
-                .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
-                .child("RojakPoint")
-                .get()
-                .addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
-                    @Override
-                    public void onComplete(@NonNull Task<DataSnapshot> task) {
-                        if (!task.isSuccessful()) {
-                            Log.e("firebase", "Error getting data", task.getException());
-                        }
-                        else {
-                            Log.d("firebase", String.valueOf(task.getResult().getValue()));
-                            //previousPoints = Integer.parseInt(task.getResult().getValue().toString());
-                        }
-                    }
-                });
-
         //Logic for True Button
         trueBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //SharedPreferences sharedPreferences = getSharedPreferences(QuizActivity.PREFS_NAME,0);
-                //SharedPreferences.Editor editor = sharedPreferences.edit();
-
-                //editor.putBoolean("hasLoggedIn", true);
-                //editor.commit();
 
                 if (Answer == true) {
                     Toast.makeText(getActivity(), "You are correct", Toast.LENGTH_SHORT).show();
@@ -84,26 +64,13 @@ public class QuizActivity extends Fragment {
                     //Perform this check before you update the question
                     if (QuestionNumber == QuizBook.images.length) {
                         GameFinish();
-                        //Intent i = new Intent(QuizActivity.this, ResultActivity.class);
-                        //Bundle bundle = new Bundle();
-                        //bundle.putInt("finalScore", points);
-                        //i.putExtras(bundle);
-                        //QuizActivity.this.finish();
-                        //startActivity(i);
                     } else {
                         updateQuestion();
                     }
                 }
-                //if the question is wrong
                 else {
                     if (QuestionNumber == QuizBook.images.length) {
                         GameFinish();
-                        //Intent i = new Intent(QuizActivity.this, ResultActivity.class);
-                        //Bundle bundle = new Bundle();
-                        //bundle.putInt("finalScore", points);
-                        //i.putExtras(bundle);
-                        //QuizActivity.this.finish();
-                        //startActivity(i);
                     } else {
                         updateQuestion();
                     }
@@ -158,26 +125,14 @@ public class QuizActivity extends Fragment {
         getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.nav_host_fragment_activity_bottom_navigation, new HomePage()).commit();
         //Initialize bundle
         Bundle bundle = new Bundle();
+
         //Put count value
-        FirebaseDatabase
-                .getInstance()
-                .getReference()
-                .child("users")
-                .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
-                .child("RojakPoint")
-                .setValue(UserData.GetInstance().curRojakPoint + points)
-                .addOnSuccessListener(new OnSuccessListener<Void>() {
-                    @Override
-                    public void onSuccess(Void aVoid) {
-                        Log.d("QUIZACTIVITY", "DATASAVED");
-                    }
-                })
-                .addOnFailureListener(new OnFailureListener() {
-                    @Override
-                    public void onFailure(@NonNull Exception e) {
-                        Log.d("QUIZACTIVITY", "DATASAVE FAILED");
-                    }
-                });
+        UserData.GetInstance().SetRojakPoint(UserData.GetInstance().GetRojakPoint() + points);
+        //Put count value
+        SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");//设置日期格式
+        String date = df.format(new Date());// new Date()为获取当前系统时间，也可使用当前时间戳
+        UserData.GetInstance().SetTimeStamp(date);
+
         bundle.putInt("finalScore", points);
         bundle.putInt("qustionNumber", QuestionNumber);
         //Initialize fragment
@@ -185,10 +140,6 @@ public class QuizActivity extends Fragment {
         //pass argument
         resultActivity.setArguments(bundle);
         //open fragment
-        //getSupportFragmentManager()
-        //       .beginTransaction()
-        //     .replace(R.id.frame_layout, resultActivity)
-        //   .commit();
         resultActivity.show(getActivity().getSupportFragmentManager(), "result activity");
     }
 

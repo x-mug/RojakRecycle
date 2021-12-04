@@ -23,7 +23,7 @@ public class RedeemActivity extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View v = View.inflate(getActivity(), R.layout.activity_home_page, null);
+        View v = View.inflate(getActivity(), R.layout.activity_redeem, null);
 
         AllTab = v.findViewById(R.id.tabAll);
         VouchersTab = v.findViewById(R.id.tabVoucher);

@@ -12,10 +12,12 @@
         android:title="@string/title_learn" />
 
     <item
+        android:id="@+id/navigation_recycle"
         android:icon="@drawable/recycle"
         android:title="Recycle" />
 
     <item
+        android:id="@+id/navigation_redeem"
         android:icon="@drawable/redeem"
         android:title="Redeem" />
 

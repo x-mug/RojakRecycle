@@ -160,15 +160,14 @@
                     android:id="@+id/pointTextView"
                     style="@style/profileDetailsTextMain"
                     android:layout_toRightOf="@id/pointImageView"
-                    android:text="RojakPoint"
                     android:fontFamily="@font/poppinsbold"
-                    />
+                    android:text="RojakPoint" />
 
                 <TextView
                     android:id="@+id/rojakpoint"
                     style="@style/profileDetailsMiniText"
                     android:layout_toRightOf="@id/pointImageView"
-                    android:text="developer"
+                    android:text="Data Fetching..."
                     android:fontFamily="@font/poppinsregular"
                     />
 

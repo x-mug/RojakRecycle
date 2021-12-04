@@ -21,7 +21,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <View
-        android:id="@+id/vector_arrow"
+        android:id="@+id/ps_vector_arrow"
         android:layout_width="14dp"
         android:layout_height="25dp"
 

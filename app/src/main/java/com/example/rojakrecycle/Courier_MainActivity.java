@@ -1,10 +1,8 @@
 package com.example.rojakrecycle;
 
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -23,7 +21,7 @@ public class Courier_MainActivity extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View v = View.inflate(getActivity(), R.layout.activity_courier_main, null);
 
-        backArrow = v.findViewById(R.id.vector_arrow);
+        backArrow = v.findViewById(R.id.ps_vector_arrow);
         backArrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

@@ -1,9 +1,11 @@
 package com.example.rojakrecycle.home;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
+import android.content.DialogInterface;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
@@ -14,6 +16,7 @@ import android.widget.Button;
 
 
 import com.example.rojakrecycle.R;
+import com.example.rojakrecycle.UserData.UserData;
 import com.github.mikephil.charting.animation.Easing;
 import com.github.mikephil.charting.charts.PieChart;
 import com.github.mikephil.charting.components.Legend;
@@ -22,10 +25,11 @@ import com.github.mikephil.charting.data.PieDataSet;
 import com.github.mikephil.charting.data.PieEntry;
 import com.github.mikephil.charting.utils.ColorTemplate;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 
 public class HomePage extends Fragment {
-
 
 
     public CardView Card1;
@@ -35,7 +39,6 @@ public class HomePage extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View v = View.inflate(getActivity(), R.layout.activity_home_page, null);
-
 
 
         Card1 = (CardView) v.findViewById(R.id.card1);
@@ -49,6 +52,25 @@ public class HomePage extends Fragment {
         Card1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");//设置日期格式
+                String date = df.format(new Date());// new Date()为获取当前系统时间，也可使用当前时间戳
+                if (UserData.GetInstance().GetTimeStamp().equals(date)) {
+                    AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(getActivity());
+                    alertDialogBuilder
+                            .setMessage("Daily Quiz is complete" +
+                                    "\nCome back tomorrow to get 5 points!")
+                            .setCancelable(false)
+                            .setPositiveButton("Back to Homepage", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialogInterface, int i) {
+                                    //getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.nav_host_fragment_activity_bottom_navigation, new NoQuizActivity()).commit();
+                                    //startActivity(new Intent(getApplicationContext(), NoQuizActivity.class));
+
+                                }
+                            });
+                    alertDialogBuilder.show();
+                    return;
+                }
                 getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.nav_host_fragment_activity_bottom_navigation, new QuizActivity()).commit();
 
             }

@@ -1,17 +1,14 @@
 package com.example.rojakrecycle;
 
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 
-import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-
-import com.example.rojakrecycle.home.QuizActivity;
 
 public class PartnerStore_MainActivity extends Fragment {
 
@@ -24,9 +21,9 @@ public class PartnerStore_MainActivity extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View v = View.inflate(getActivity(), R.layout.activity_home_page, null);
+        View v = View.inflate(getActivity(), R.layout.activity_partner_store_main, null);
 
-        backArrow = v.findViewById(R.id.vector_arrow);
+        backArrow = v.findViewById(R.id.ps_vector_arrow);
         backArrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
