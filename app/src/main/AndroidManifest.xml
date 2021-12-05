@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.RojakRecycle">
         <activity
+            android:name=".SplashScreen_MainActivity"
+            android:exported="true" />
+        <activity
             android:name=".navBar.BottomNavigationActivity"
             android:exported="false"
             android:label="@string/RojakRecycle" />
