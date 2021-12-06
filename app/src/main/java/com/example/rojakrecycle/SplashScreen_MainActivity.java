@@ -17,7 +17,6 @@ import com.example.rojakrecycle.login.LoginActivity;
 public class SplashScreen_MainActivity extends AppCompatActivity {
 
     private ImageView SplashEarth;
-    private ImageView ThreeRLogo;
     private  static int Splash_TIMEOUT = 6000;
 
     View Title;
@@ -40,9 +39,6 @@ public class SplashScreen_MainActivity extends AppCompatActivity {
 
         SplashEarth = findViewById(R.id.RecycleEarthLogo);
         Glide.with(this).load(R.drawable.recycleearth).into(SplashEarth);
-
-        ThreeRLogo = findViewById(R.id.ThreeRLogo);
-        Glide.with(this).load(R.drawable.threer).into(ThreeRLogo);
 
 
         //Animation call
