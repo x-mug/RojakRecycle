@@ -49,6 +49,10 @@ public class RedeemDonateAdapter extends RecyclerView.Adapter <RedeemDonateAdapt
                 extras.putInt("Image", list.get(holder.getAdapterPosition()).getRImage());
                 extras.putString("Location", list.get(holder.getAdapterPosition()).getRLocation());
                 extras.putString("Exchange", list.get(holder.getAdapterPosition()).getRExchange());
+                extras.putDoubleArray("LatLng", new double[]{
+                        list.get(holder.getAdapterPosition()).getLatLng().latitude,
+                        list.get(holder.getAdapterPosition()).getLatLng().longitude
+                });
                 intent.putExtras(extras);
                 context.startActivity(intent);
             }

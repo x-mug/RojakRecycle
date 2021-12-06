@@ -63,6 +63,8 @@ public class MapActivity extends Fragment implements OnMapReadyCallback, GoogleM
                 .getSupportFragmentManager().findFragmentById(R.id.googleMap);
         mapFragment.getMapAsync(this);
 
+        view.bringToFront();
+
         return view;
     }
 

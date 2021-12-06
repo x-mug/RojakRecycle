@@ -35,7 +35,7 @@ public class FragAll extends Fragment {
 
         list = new ArrayList<>();
         for (int i = 0; i < Redeem_AllThingsData.RName.length; i++) {
-            list.add(new Redeem_AllThings(Redeem_AllThingsData.RName[i], Redeem_AllThingsData.RLocation[i], Redeem_AllThingsData.RExchange[i], Redeem_AllThingsData.RImage[i],Redeem_AllThingsData.RPoints[i]));
+            list.add(new Redeem_AllThings(Redeem_AllThingsData.RName[i], Redeem_AllThingsData.RLocation[i], Redeem_AllThingsData.RExchange[i], Redeem_AllThingsData.RImage[i],Redeem_AllThingsData.RPoints[i], Redeem_AllThingsData.RLatLng[i]));
         }
 
         RedeemAllAdapter = new RedeemAllAdapter(getActivity(), list);

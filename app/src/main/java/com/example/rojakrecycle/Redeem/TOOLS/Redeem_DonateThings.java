@@ -1,5 +1,7 @@
 package com.example.rojakrecycle.Redeem.TOOLS;
 
+import com.google.android.gms.maps.model.LatLng;
+
 public class Redeem_DonateThings {
     Integer RImage;
     String RName, RLocation, RExchange, RPoints;;
@@ -17,4 +19,6 @@ public class Redeem_DonateThings {
     public String getRExchange() {return RExchange;}
     public String getRPoints() {return RPoints;}
     public Integer getRImage() {return RImage;}
+    LatLng latLng;
+    public LatLng getLatLng() {return latLng;}
 }
