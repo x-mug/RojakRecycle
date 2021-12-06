@@ -48,12 +48,12 @@ public class RedeemDescriptionActivity extends AppCompatActivity {
 
         CardView cv = findViewById(R.id.cv_pc1);
         cv.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                getSupportFragmentManager().beginTransaction().replace(R.id.redeemDescripFragment
-                        , new MapActivity(new LatLng(3.1053190100866708f,101.46720372898695f), "")).commit();
-            }
-        }
+                                  @Override
+                                  public void onClick(View view) {
+                                      getSupportFragmentManager().beginTransaction().replace(R.id.redeemDescripFragment
+                                              , new MapActivity(new LatLng(extras.getDoubleArray("LatLng")[0], extras.getDoubleArray("LatLng")[1]), "")).commit();
+                                  }
+                              }
         );
     }
 }
