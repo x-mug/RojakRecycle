@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -50,6 +52,14 @@ public class UnrecyclablesAdapter extends RecyclerView.Adapter <UnrecyclablesAda
                 context.startActivity(intent);
             }
         });
+
+        startingAnim(holder.cardView);
+    }
+
+    private void startingAnim(View thisView) {
+        Animation animation = AnimationUtils.loadAnimation(context, R.anim.titlefall_anim);
+        thisView.startAnimation(animation);
+
     }
 
     @Override

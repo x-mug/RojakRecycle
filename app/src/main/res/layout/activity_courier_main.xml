@@ -7,18 +7,18 @@
     tools:context=".Courier_MainActivity"
     android:background="@color/ghostwhite"
     >
+
     <View
         android:id="@+id/rectangle_1"
         android:layout_width="413dp"
         android:layout_height="217dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginBottom="35dp"
+        android:layout_marginBottom="8dp"
         android:background="@color/lilac"
         app:layout_constraintBottom_toTopOf="@+id/cv_pc1"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <View
         android:id="@+id/ps_vector_arrow"
@@ -26,60 +26,52 @@
         android:layout_height="25dp"
 
         android:layout_marginStart="23dp"
-        android:layout_marginTop="35dp"
         android:layout_marginEnd="370dp"
-        android:layout_marginBottom="578dp"
+        android:layout_marginBottom="544dp"
         android:background="@drawable/leftarrow"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.509"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.186" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/tv_Back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="48dp"
-        android:layout_marginTop="38dp"
         android:layout_marginEnd="270dp"
-        android:layout_marginBottom="584dp"
+        android:layout_marginBottom="544dp"
         android:fontFamily="@font/roboto_medium"
         android:text="Back"
         android:textSize="18dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.087"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.137" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/tv_title"
         android:layout_width="305dp"
         android:layout_height="20dp"
         android:layout_marginStart="28dp"
-        android:layout_marginTop="85dp"
         android:layout_marginEnd="29dp"
-        android:layout_marginBottom="535dp"
+        android:layout_marginBottom="504dp"
         android:fontFamily="@font/poppinsregular"
         android:text="Available Rojak couriers near"
         android:textAlignment="center"
         android:textSize="18dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/tv_title2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="78dp"
-        android:layout_marginTop="110dp"
         android:layout_marginEnd="103dp"
-        android:layout_marginBottom="504dp"
+        android:layout_marginBottom="448dp"
         android:fontFamily="@font/poppinsbold"
         android:text="Sunsuria Park"
         android:textAlignment="center"
@@ -87,29 +79,8 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.571"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.63" />
-
-    <View
-        android:id="@+id/downArrow"
-        android:layout_width="16dp"
-        android:layout_height="7dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="310dp"
-        android:layout_marginTop="130dp"
-        android:layout_marginBottom="515dp"
-        android:background="@drawable/arrowicon"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.559" />
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cv_pc1"
@@ -123,7 +94,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
 
         <RelativeLayout
             android:id="@+id/media1"
@@ -142,8 +114,7 @@
             android:layout_alignParentTop="true"
             android:layout_marginLeft="16dp"
             android:layout_marginTop="16dp"
-            app:cardElevation="0dp"
-            >
+            app:cardElevation="0dp">
 
             <Button
                 android:id="@+id/btn_monogram1"
@@ -164,10 +135,10 @@
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentTop="true"
                 android:layout_marginLeft="56dp"
+                android:fontFamily="@font/poppinsbold"
                 android:gravity="top"
                 android:lineSpacingExtra="5sp"
                 android:text="Ahmad Suffandi"
-                android:fontFamily="@font/poppinsbold"
                 android:translationY="-2.62sp" />
 
             <TextView
@@ -178,10 +149,10 @@
                 android:layout_alignParentTop="true"
                 android:layout_marginLeft="56dp"
                 android:layout_marginTop="28dp"
+                android:fontFamily="@font/poppinsregular"
                 android:gravity="top"
                 android:lineSpacingExtra="4sp"
                 android:text="Available for below 5kg"
-                android:fontFamily="@font/poppinsregular"
                 android:translationY="-1.8sp" />
 
         </androidx.cardview.widget.CardView>
@@ -200,7 +171,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
 
         <RelativeLayout
             android:id="@+id/media2"
@@ -219,8 +191,7 @@
             android:layout_alignParentTop="true"
             android:layout_marginLeft="16dp"
             android:layout_marginTop="16dp"
-            app:cardElevation="0dp"
-            >
+            app:cardElevation="0dp">
 
             <Button
                 android:id="@+id/btn_monogram2"
@@ -241,10 +212,10 @@
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentTop="true"
                 android:layout_marginLeft="56dp"
+                android:fontFamily="@font/poppinsbold"
                 android:gravity="top"
                 android:lineSpacingExtra="5sp"
                 android:text="Chan Weng Keat"
-                android:fontFamily="@font/poppinsbold"
                 android:translationY="-2.62sp" />
 
             <TextView
@@ -255,10 +226,10 @@
                 android:layout_alignParentTop="true"
                 android:layout_marginLeft="56dp"
                 android:layout_marginTop="28dp"
+                android:fontFamily="@font/poppinsregular"
                 android:gravity="top"
                 android:lineSpacingExtra="4sp"
                 android:text="Available for below 10kg"
-                android:fontFamily="@font/poppinsregular"
                 android:translationY="-1.8sp" />
 
         </androidx.cardview.widget.CardView>
@@ -277,7 +248,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
 
         <RelativeLayout
             android:id="@+id/media3"
@@ -287,9 +259,8 @@
             android:layout_alignParentRight="true"
             android:layout_alignParentBottom="true"
             android:layout_marginLeft="260dp"
-            android:background="@drawable/char4"
             android:alpha="0.5"
-            />
+            android:background="@drawable/char4" />
 
         <androidx.cardview.widget.CardView
             android:layout_width="240dp"
@@ -299,8 +270,7 @@
             android:layout_marginLeft="16dp"
             android:layout_marginTop="16dp"
             android:alpha="0.5"
-            app:cardElevation="0dp"
-            >
+            app:cardElevation="0dp">
 
             <Button
                 android:id="@+id/btn_monogram3"
@@ -321,10 +291,10 @@
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentTop="true"
                 android:layout_marginLeft="56dp"
+                android:fontFamily="@font/poppinsbold"
                 android:gravity="top"
                 android:lineSpacingExtra="5sp"
                 android:text="Ismail Kandar"
-                android:fontFamily="@font/poppinsbold"
                 android:translationY="-2.62sp" />
 
             <TextView
@@ -335,10 +305,10 @@
                 android:layout_alignParentTop="true"
                 android:layout_marginLeft="56dp"
                 android:layout_marginTop="28dp"
+                android:fontFamily="@font/poppinsregular"
                 android:gravity="top"
                 android:lineSpacingExtra="4sp"
                 android:text="Not available for now"
-                android:fontFamily="@font/poppinsregular"
                 android:translationY="-1.8sp" />
 
         </androidx.cardview.widget.CardView>
