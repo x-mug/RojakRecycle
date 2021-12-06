@@ -11,10 +11,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.example.rojakrecycle.Map.MapActivity;
+
 public class Courier1_MainActivity extends Fragment {
     View backArrow;
     TextView backText;
     CardView PhoneCall;
+    CardView map;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
