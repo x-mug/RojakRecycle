@@ -143,13 +143,17 @@ public class LoginActivity extends AppCompatActivity {
         if (user != null) {
             Toast.makeText(LoginActivity.this, "Welcome, " + user.getDisplayName(),
                     Toast.LENGTH_SHORT).show();
+            UserData.GetInstance().Init();
             UserData.GetInstance().addPropertyChangeListener(new PropertyChangeListener() {
                 @Override
                 public void propertyChange(PropertyChangeEvent propertyChangeEvent) {
-                    Intent intent = new Intent(LoginActivity.this, BottomNavigationActivity.class);
-                    intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
-                    intent.setClass(LoginActivity.this,BottomNavigationActivity.class);
-                    startActivity(intent);
+                    if(propertyChangeEvent.getPropertyName().equals("InitComp"))
+                    {
+                        Intent intent = new Intent(LoginActivity.this, BottomNavigationActivity.class);
+                        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+                        intent.setClass(LoginActivity.this, BottomNavigationActivity.class);
+                        startActivity(intent);
+                    }
                 }
             });
         } else {

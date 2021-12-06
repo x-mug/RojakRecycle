@@ -16,10 +16,11 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentActivity;
 
 import com.google.android.material.navigation.NavigationBarView;
 
-public class BottomNavigationActivity extends AppCompatActivity {
+public class BottomNavigationActivity extends FragmentActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

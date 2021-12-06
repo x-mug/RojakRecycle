@@ -84,6 +84,7 @@ public class RegisterActivity extends AppCompatActivity {
             UserProfileChangeRequest profileUpdates = new UserProfileChangeRequest.Builder()
                     .setDisplayName(binding.editTextName.getText().toString())
                     .build();
+            UserData.GetInstance().Init();
             user.updateProfile(profileUpdates).addOnCompleteListener(this, new OnCompleteListener<Void>() {
                 @Override
                 public void onComplete(@NonNull Task<Void> task) {
@@ -92,10 +93,13 @@ public class RegisterActivity extends AppCompatActivity {
                     UserData.GetInstance().addPropertyChangeListener(new PropertyChangeListener() {
                         @Override
                         public void propertyChange(PropertyChangeEvent propertyChangeEvent) {
-                            Intent intent = new Intent(RegisterActivity.this, BottomNavigationActivity.class);
-                            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
-                            intent.setClass(RegisterActivity.this,BottomNavigationActivity.class);
-                            startActivity(intent);
+                            if(propertyChangeEvent.getPropertyName().equals("InitComp"))
+                            {
+                                Intent intent = new Intent(RegisterActivity.this, BottomNavigationActivity.class);
+                                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+                                intent.setClass(RegisterActivity.this, BottomNavigationActivity.class);
+                                startActivity(intent);
+                            }
                         }
                     });
                 }
