@@ -54,6 +54,8 @@
         android:text="130 points"
         android:translationY="-1.8sp"
         android:fontFamily="@font/poppinsregular"
+        android:textSize="12dp"
+
         />
 
 </androidx.cardview.widget.CardView>

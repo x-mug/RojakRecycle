@@ -120,7 +120,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/char3" />
+        android:src="@drawable/char3" />
 
     <TextView
         android:id="@+id/tv_title3"

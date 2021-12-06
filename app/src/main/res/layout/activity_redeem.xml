@@ -19,7 +19,9 @@
             android:fontFamily="@font/poppinsbold"
             android:text="Redeem."
             android:textColor="@color/black"
-            android:textSize="64dp">
+            android:textSize="64dp"
+            android:layout_marginTop="30dp"
+            >
 
         </TextView>
 
