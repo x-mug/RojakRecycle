@@ -32,7 +32,8 @@ public class Partner4_MainActivity extends Fragment {
         map.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.nav_host_fragment_activity_bottom_navigation, new MapActivity(new LatLng(0,0), "")).commit();
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.nav_host_fragment_activity_bottom_navigation
+                        , new MapActivity(new LatLng(3.1054860462864577f, 101.46747831071785f), "")).commit();
             }
         });
 

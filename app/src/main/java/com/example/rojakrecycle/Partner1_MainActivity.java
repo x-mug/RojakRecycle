@@ -33,7 +33,7 @@ public class Partner1_MainActivity extends Fragment {
             @Override
             public void onClick(View view) {
                 getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.nav_host_fragment_activity_bottom_navigation
-                        , new MapActivity(new LatLng(0,0), "")).commit();
+                        , new MapActivity(new LatLng(3.1053190100866708f,101.46720372898695f), "")).commit();
             }
         });
 

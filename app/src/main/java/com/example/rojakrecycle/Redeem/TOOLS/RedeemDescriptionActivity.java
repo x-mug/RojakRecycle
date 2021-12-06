@@ -1,14 +1,18 @@
 package com.example.rojakrecycle.Redeem.TOOLS;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 
 import android.content.Intent;
 import android.location.Location;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.rojakrecycle.Map.MapActivity;
 import com.example.rojakrecycle.R;
+import com.google.android.gms.maps.model.LatLng;
 
 public class RedeemDescriptionActivity extends AppCompatActivity {
 
@@ -42,6 +46,14 @@ public class RedeemDescriptionActivity extends AppCompatActivity {
         String Exchange = extras.getString("Exchange");
         tv3.setText(Exchange);
 
-
+        CardView cv = findViewById(R.id.cv_pc1);
+        cv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                getSupportFragmentManager().beginTransaction().replace(R.id.redeemDescripFragment
+                        , new MapActivity(new LatLng(3.1053190100866708f,101.46720372898695f), "")).commit();
+            }
+        }
+        );
     }
 }
