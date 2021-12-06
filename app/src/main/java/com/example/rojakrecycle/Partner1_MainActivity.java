@@ -1,5 +1,6 @@
 package com.example.rojakrecycle;
 
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 
 import android.os.Bundle;
@@ -7,6 +8,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
+import com.example.rojakrecycle.Map.MapActivity;
+import com.google.android.gms.maps.model.LatLng;
 
 public class Partner1_MainActivity extends Fragment {
     View backArrow;
@@ -21,6 +25,15 @@ public class Partner1_MainActivity extends Fragment {
             @Override
             public void onClick(View view) {
                 getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.nav_host_fragment_activity_bottom_navigation, new PartnerStore_MainActivity()).commit();
+            }
+        });
+
+        CardView map = v.findViewById(R.id.cv_pc1);
+        map.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.nav_host_fragment_activity_bottom_navigation
+                        , new MapActivity(new LatLng(0,0), "")).commit();
             }
         });
 

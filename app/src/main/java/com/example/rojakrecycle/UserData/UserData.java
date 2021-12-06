@@ -27,6 +27,7 @@ public class UserData {
     private int rojakPoint;
     private String timeStamp;
     private PropertyChangeSupport changes = new PropertyChangeSupport(this);
+    private boolean InitComp;
 
     public void SetTimeStamp(String timeStamp) {
         String oldTimeStamp = this.timeStamp;
@@ -58,7 +59,7 @@ public class UserData {
 
     private static UserData instance;
 
-    protected void Init() {
+    public void Init() {
         FirebaseDatabase.getInstance().getReference().child("users")
                 .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
                 .get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
@@ -80,14 +81,16 @@ public class UserData {
                     }
                     try
                     {
-                        instance.SetTimeStamp(Optional.ofNullable(InsultResult(task.getResult(), "timeStamp"))
+                        instance.timeStamp = (Optional.ofNullable(InsultResult(task.getResult(), "timeStamp"))
                                 .map(String::valueOf)
                                 .orElse(""));
                     }
                     catch (Exception e)
                     {
-                        instance.SetTimeStamp("");
+                        instance.timeStamp = ("");
                     }
+
+                    changes.firePropertyChange("InitComp", InitComp, !InitComp);
 
                 }
             }
@@ -123,7 +126,6 @@ public class UserData {
     public static UserData GetInstance() {
         if (instance == null) {
             instance = new UserData();
-            instance.Init();
         }
         return instance;
     }
