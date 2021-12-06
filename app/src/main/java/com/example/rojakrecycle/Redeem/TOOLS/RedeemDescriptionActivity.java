@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.rojakrecycle.Map.MapActivity;
 import com.example.rojakrecycle.R;
@@ -46,14 +47,12 @@ public class RedeemDescriptionActivity extends AppCompatActivity {
         String Exchange = extras.getString("Exchange");
         tv3.setText(Exchange);
 
-        CardView cv = findViewById(R.id.cv_pc1);
+        CardView cv = findViewById(R.id.cv_pc3);
         cv.setOnClickListener(new View.OnClickListener() {
-                                  @Override
-                                  public void onClick(View view) {
-                                      getSupportFragmentManager().beginTransaction().replace(R.id.redeemDescripFragment
-                                              , new MapActivity(new LatLng(extras.getDoubleArray("LatLng")[0], extras.getDoubleArray("LatLng")[1]), "")).commit();
-                                  }
-                              }
-        );
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(RedeemDescriptionActivity.this, "Sorry, Your RojakPoint is not sufficient", Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 }

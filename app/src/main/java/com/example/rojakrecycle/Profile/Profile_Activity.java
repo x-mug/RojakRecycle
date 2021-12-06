@@ -52,7 +52,7 @@ public class Profile_Activity extends Fragment {
         rojakPoint.setText(String.valueOf(UserData.GetInstance().GetRojakPoint()));
 
         name.setText(user.getDisplayName());
-        phoneNumber.setText(user.getPhoneNumber());
+        phoneNumber.setText(UserData.GetInstance().GetMobileNum());
         email.setText(user.getEmail());
 
         TextView logoutBtn = v.findViewById(R.id.LogOutBtn);

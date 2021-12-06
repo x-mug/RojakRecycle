@@ -26,6 +26,7 @@ import java.util.function.Function;
 public class UserData {
     private int rojakPoint;
     private String timeStamp;
+    private String mobileNum;
     private PropertyChangeSupport changes = new PropertyChangeSupport(this);
     private boolean InitComp;
 
@@ -47,6 +48,10 @@ public class UserData {
 
     public int GetRojakPoint() {
         return rojakPoint;
+    }
+
+    public String GetMobileNum() {
+        return mobileNum;
     }
 
     public void addPropertyChangeListener(PropertyChangeListener listener) {
@@ -88,6 +93,16 @@ public class UserData {
                     catch (Exception e)
                     {
                         instance.timeStamp = ("");
+                    }
+                    try
+                    {
+                        instance.mobileNum = (Optional.ofNullable(InsultResult(task.getResult(), "mobileNum"))
+                                .map(String::valueOf)
+                                .orElse(""));
+                    }
+                    catch (Exception e)
+                    {
+                        instance.mobileNum = ("");
                     }
 
                     changes.firePropertyChange("InitComp", InitComp, !InitComp);

@@ -14,11 +14,14 @@ import com.example.rojakrecycle.UserData.UserData;
 import com.example.rojakrecycle.navBar.BottomNavigationActivity;
 import com.example.rojakrecycle.databinding.ActivityRegisterBinding;
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.UserProfileChangeRequest;
+import com.google.firebase.database.FirebaseDatabase;
 
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
@@ -47,7 +50,8 @@ public class RegisterActivity extends AppCompatActivity {
     }
 
     private void RegisterWithEmailAndPassword() {
-        if(!isEmail(binding.editTextEmail.getText().toString()) || binding.editTextPassword.getText().toString().isEmpty())
+        if(!isEmail(binding.editTextEmail.getText().toString()) || binding.editTextPassword.getText().toString().isEmpty()
+                || binding.editTextName.getText().toString().isEmpty() || binding.editTextMobile.getText().toString().isEmpty())
         {
             Toast.makeText(this, "Input Error", Toast.LENGTH_SHORT).show();
             return;
@@ -104,6 +108,25 @@ public class RegisterActivity extends AppCompatActivity {
                     });
                 }
             });
+            FirebaseDatabase
+                    .getInstance()
+                    .getReference()
+                    .child("users")
+                    .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
+                    .child("mobileNum")
+                    .setValue(binding.editTextMobile.getText().toString())
+                    .addOnSuccessListener(new OnSuccessListener<Void>() {
+                        @Override
+                        public void onSuccess(Void aVoid) {
+                            Log.d("QUIZACTIVITY", "DATASAVED");
+                        }
+                    })
+                    .addOnFailureListener(new OnFailureListener() {
+                        @Override
+                        public void onFailure(@NonNull Exception e) {
+                            Log.d("QUIZACTIVITY", "DATASAVE FAILED");
+                        }
+                    });
         } else {
             Toast.makeText(RegisterActivity.this, "Authentication failed.",
                     Toast.LENGTH_SHORT).show();
