@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.rojakrecycle.Learn.LearnActivity;
 import com.example.rojakrecycle.Profile.Profile_Activity;
@@ -64,6 +65,20 @@ public class BottomNavigationActivity extends FragmentActivity {
 
     private void setMain() {
         this.getSupportFragmentManager().beginTransaction().add(R.id.nav_host_fragment_activity_bottom_navigation, new HomePage()).commit();
+    }
+
+    // 第一次按下返回键的事件
+    private long firstPressedTime;
+
+    // System.currentTimeMillis() 当前系统的时间
+    @Override
+    public void onBackPressed() {
+        if (System.currentTimeMillis() - firstPressedTime < 2000) {
+            super.onBackPressed();
+        } else {
+            Toast.makeText(this, "Press One More to Quit", Toast.LENGTH_SHORT).show();
+            firstPressedTime = System.currentTimeMillis();
+        }
     }
 
 }
