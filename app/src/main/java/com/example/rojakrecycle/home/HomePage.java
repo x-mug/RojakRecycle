@@ -58,7 +58,7 @@ public class HomePage extends Fragment {
                     AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(getActivity());
                     alertDialogBuilder
                             .setMessage("Daily Quiz is complete" +
-                                    "\nCome back tomorrow to get 5 points!")
+                                    "\nCome back tomorrow to get more points!")
                             .setCancelable(false)
                             .setPositiveButton("Back to Homepage", new DialogInterface.OnClickListener() {
                                 @Override
