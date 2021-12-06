@@ -128,6 +128,7 @@
         android:layout_height="30dp"
         android:layout_marginStart="53dp"
         android:layout_marginEnd="53dp"
+        android:layout_marginBottom="8dp"
         android:fontFamily="@font/poppinsbold"
         android:text="Chan Weng Keat"
         android:textAlignment="center"

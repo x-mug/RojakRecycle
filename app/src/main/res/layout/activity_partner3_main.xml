@@ -132,7 +132,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_title"
-        app:srcCompat="@drawable/handm" />
+        android:src="@drawable/handm" />
 
     <TextView
         android:id="@+id/tv_title3"

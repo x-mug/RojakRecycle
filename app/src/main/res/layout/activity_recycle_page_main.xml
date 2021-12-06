@@ -52,13 +52,12 @@
             android:layout_marginTop="23dp"
             android:layout_marginEnd="88dp"
             android:layout_marginBottom="72dp"
-            android:fontFamily="@font/poppins_bold"
+            android:fontFamily="@font/poppinsbold"
             android:gravity="center_vertical"
             android:lineHeight="30dp"
-            android:textSize="32dp"
             android:text="Drop-off at a store"
             android:textColor="@color/black"
-             />
+            android:textSize="32dp" />
 
         <TextView
             android:id="@+id/tv_Info1"
@@ -110,13 +109,12 @@
             android:layout_marginTop="23dp"
             android:layout_marginEnd="88dp"
             android:layout_marginBottom="72dp"
-            android:fontFamily="@font/poppins_bold"
+            android:fontFamily="@font/poppinsbold"
             android:gravity="center_vertical"
             android:lineHeight="30dp"
-            android:textSize="32dp"
             android:text="Call for pick-up"
             android:textColor="@color/black"
-            />
+            android:textSize="32dp" />
 
         <TextView
             android:id="@+id/tv_Info2"
